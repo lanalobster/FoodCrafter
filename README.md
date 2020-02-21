@@ -1,3 +1,5 @@
 # FoodCrafter
 OUR FOOOOT(D)
-Ляна<3
+child_name = Ляна<3(ЛІЗА)
+print(child_name)
+>>Дмитризавета
