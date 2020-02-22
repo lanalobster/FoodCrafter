@@ -1,5 +1,5 @@
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
@@ -7,28 +7,24 @@ body {
     background-image: url(images/backgroung.jpg);
 }
 
-#block-body {
-    width: 1380px;
-    margin: 0px auto;
-    height: auto;
-}
-
 header {
-    width: 1380px;
+    width: 100vw;
     height: 80px;
     background-color: #FFBC73;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .logo {
-    width: 240px;
-    float: left;
-    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 5px;
 }
 
-.logo a{
-    display: block;
-    margin-left: 30px;
-    margin-top: 17px;
+.logo a {
     font-family: 'Headland One', serif;
     font-size: 100%;
     color: #A62500;
@@ -37,49 +33,59 @@ header {
 }
 
 .top-menu {
-    width: 885px;
-    height: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
     float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.top-menu ul{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
 }
 
 .top-menu ul li {
     list-style: none;
-    float: left;
     text-align: center;
+    flex: 1;
 }
 
 .top-menu ul li a {
-    display: block;
-    width: 290px;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     text-decoration: none;
     font-size: 20px;
     color: #1d7373;
-    height: 50px;
     font-family: 'Lora', serif;
-    padding-top: 30px;
-/*    padding-left: 25px;*/
     cursor: pointer;
 }
 
-.top-menu li{
-    transition: all 0.3s ease;
+.top-menu li a {
+    transition: all 0.5s ease;
 }
 
-.top-menu li:hover {
+.top-menu li a:hover {
     background: #A62500;
+    color: #fff;
 }
 
 .block-top-auth {
-    width: 100px;
-    float: left;
-    margin-left: 140px;
-    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 15px;
 }
 
 .block-top-auth p {
-    margin-top: 12px;
     text-align: center;
-    margin-bottom: 8px;
     font-family: 'Lora', serif;
 }
 
