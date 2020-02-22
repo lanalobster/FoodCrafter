@@ -61,8 +61,11 @@ header {
     cursor: pointer;
 }
 
-.top-menu li:hover {
+.top-menu li{
     transition: all 0.3s ease;
+}
+
+.top-menu li:hover {
     background: #A62500;
 }
 
@@ -86,10 +89,10 @@ header {
     font-size: 15px;
     cursor: pointer;
     text-decoration: underline;
+    transition: all 0.3s ease;
 }
 
 .block-top-auth a:hover {
-    transition: all 0.3s ease;
     color: #A62500;
 }
 
