@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Headland+One&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 <body>
     <div id="block-body">
@@ -29,6 +30,38 @@
                 <p><a href="">Регістрація</a></p>
             </div>
         </header>
+        <div class="main-carousel">
+            <div class="carousel-cell">
+                <div class="cell1">
+                    <h1>Розумний холодильник!</h1>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="cell2">
+                    
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="cell3">
+                    
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+        var elem = document.querySelector('.main-carousel');
+        var flkty = new Flickity( elem, {
+          // options
+          cellAlign: 'left',
+          contain: true
+        });
+
+        // element argument can be a selector string
+        //   for an individual element
+        var flkty = new Flickity( '.main-carousel', {
+          // options
+        });
+    </script>
 </body>
 </html>

@@ -5,12 +5,14 @@
 
 body {
     background-image: url(images/backgroung.jpg);
+    overflow-x: hidden;
 }
 
 header {
     width: 100vw;
     height: 80px;
     background-color: #FFBC73;
+   /* background-image: url("images/backgroung-header.jpg");*/
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -102,3 +104,38 @@ header {
     color: #A62500;
 }
 
+.carousel-cell {
+    width: 100vw;
+    height: 88vh;
+    padding: 0;
+}
+
+.carousel-cell img{
+    width: 100vw;
+    height: 88vh;
+}
+
+.cell1 {
+    width: 100vw;
+    height: 88vh;
+    background-image: url("images/slide1.jpg");
+    background-size:cover;
+}
+
+.cell2 {
+    width: 100vw;
+    height: 88vh;
+    background-image: url("images/slide2.jpg");
+    background-size:cover;
+}
+
+.cell3 {
+    width: 100vw;
+    height: 88vh;
+    background-image: url("images/slide3.jpg");
+    background-size:cover;
+}
+
+.flickity-page-dots {
+    display: none;
+}
