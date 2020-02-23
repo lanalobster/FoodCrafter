@@ -104,7 +104,7 @@ header {
     color: #A62500;
 }
 
-.carousel-cell {
+.carousel-cell{
     width: 100vw;
     height: 88vh;
     padding: 0;
@@ -137,3 +137,70 @@ header {
 .flickity-page-dots {
     display: none;
 }
+
+footer{
+    background-color: #191919;
+    color: #dbd9d9;  
+    width: 100vw;
+    height: 25vh;
+}
+.columns{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.addresses ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    list-style-type: none;
+}
+.col1, .col2{
+    margin: 1%;
+}
+.col3{
+    margin-top: 1%;
+    margin-left: 52%;
+}
+.addresses li{
+    margin: 3%;
+}
+.email p{
+    margin: 3%;
+}
+.addresses address{
+    font-style: normal;
+}
+.columns h4{
+    color: #adacac;
+    text-align: center;
+    font-weight: normal;
+}
+.rights p{
+    margin-left: 1%;
+    color: #adacac;
+}
+.socialProfiles ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.fa{
+  padding: 8px;
+  font-size: 30px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  background-color: #dbd9d9;
+  color: #191919;
+}
+.fa:hover{
+    opacity: 0.7;
+}
+
+
