@@ -145,17 +145,17 @@ header {
     padding: 2vw;
     height: 50vh;
     border-radius: 25px;
-    background-color: rgba(255, 255, 255,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .block1 h2 {
     font-size: 300%;
-    color: #000;
+    color: white;
     font-family: 'Ubuntu', Bold;
 }
 
 .sup-text {
-    color: #000;
+    color: white;
     font-family: 'Ubuntu', light italic;
     text-align: center;
     font-size: 145%;
@@ -333,18 +333,15 @@ header {
     text-align:;
 }
 
-.inspiration-text p{
-    margin-left: 15%;
-    margin-right: 15%;
-    padding: 2%
-}
-
 .inspiration-text-header{
     font-family: 'Lora', Light;
     font-size: 300%;
 }
 
 .inspiration-text-suptext{
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 2%;
     text-indent: 5%;
     font-family: 'Ubuntu', light italic;
     font-size: 125%;
