@@ -4,18 +4,22 @@
 }
 
 body {
-    background-image: url(images/backgroung.jpg);
+    /*background-image: url(images/backgroung.jpg);*/
+    background-color: white;
     overflow-x: hidden;
+    min-width: 30vw;
 }
-
+/*Header*/
 header {
     width: 100vw;
     height: 80px;
-    background-color: #FFBC73;
+    /*background-color: #FFBC73;*/
+    background-color: white;
    /* background-image: url("images/backgroung-header.jpg");*/
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 6px solid #A62500;
 }
 
 .logo {
@@ -103,37 +107,217 @@ header {
 .block-top-auth a:hover {
     color: #A62500;
 }
-
+/*Slider*/
 .carousel-cell {
     width: 100vw;
-    height: 88vh;
+    height: 90vh;
     padding: 0;
 }
 
 .carousel-cell img{
     width: 100vw;
-    height: 88vh;
+    height: 89vh;
 }
-
 
 .cell1, .cell2, .cell3 {
     width: 100vw;
-    height: 88vh;
+    height: 89vh;
     background-size:cover;
 }
 
+/*КЛІТИНКА ПЕРША*/
+
 .cell1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url("images/slide1.jpg");
 }
 
+.block1 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+    width: auto;
+    padding: 2vw;
+    height: 50vh;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255,0.5);
+}
+
+.block1 h2 {
+    font-size: 300%;
+    color: #000;
+    font-family: 'Ubuntu', Bold;
+}
+
+.sup-text {
+    color: #000;
+    font-family: 'Ubuntu', light italic;
+    text-align: center;
+    font-size: 145%;
+    margin-top: 5vh;
+}
+
+.button1 {
+    margin-bottom: 10vh;
+    margin-top: 15vh;
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button1:hover {
+    opacity: 1;
+}
+
+.button1 p {
+    font-size: 150%;
+    font-family: 'Ubuntu', Regular;
+    color: black;
+}
+
+/*КЛІТИНКА ДРУГА*/
 .cell2 {
     background-image: url("images/slide2.jpg");
 }
 
+/*КЛІТИНКА ТРЕТЯ*/
 .cell3 {
     background-image: url("images/slide3.jpg");
 }
 
 .flickity-page-dots {
     display: none;
+}
+
+/*Описовий блок*/
+.desciption-block {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1d7373;
+}
+
+.desciption-block-header {
+    font-family: 'Lora', Light;
+    font-size: 300%;
+}
+
+.desciption-block-supporttext {
+    font-family: 'Ubuntu', light italic;
+    font-size: 125%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.desciption-block-bottom {
+    margin-top: 20px;
+    font-size: 125%;
+    font-family: 'Ubuntu', Bold;
+    font-weight: 600;
+}
+
+.popular-recipe-block {
+    width: 100vw;
+    height: 80vh;
+    background-color: #A62500;
+    padding: 0;
+    margin: 0;
+}
+
+/*Footer*/
+
+footer{
+    background-color: #191919;
+    color: #dbd9d9;  
+    width: 100vw;
+    height: 25vh;
+}
+
+.columns{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.addresses ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    list-style-type: none;
+}
+
+.col1, .col2{
+    margin: 1%;
+}
+
+.col3{
+    margin-top: 1%;
+    margin-left: 52%;
+}
+
+.addresses li{
+    margin: 3%;
+}
+
+.email p{
+    margin: 3%;
+}
+
+.addresses address{
+    font-style: normal;
+}
+
+.columns h4{
+    color: #adacac;
+    text-align: center;
+    font-weight: normal;
+}
+
+.rights p{
+    margin-left: 1%;
+    color: #adacac;
+}
+
+.socialProfiles ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.fa {
+    padding: 8px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    background-color: #dbd9d9;
+    color: #191919;
+} 
+
+.fa:hover{
+    opacity: 0.7;
 }
