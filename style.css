@@ -6,8 +6,9 @@
 body {
     background-image: url(images/backgroung.jpg);
     overflow-x: hidden;
+    min-width: 30vw;
 }
-
+/*Header*/
 header {
     width: 100vw;
     height: 80px;
@@ -17,6 +18,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 6px solid #A62500;
 }
 
 .logo {
@@ -104,7 +106,7 @@ header {
 .block-top-auth a:hover {
     color: #A62500;
 }
-
+/*Slider*/
 .carousel-cell {
     width: 100vw;
     height: 90vh;
@@ -116,12 +118,13 @@ header {
     height: 89vh;
 }
 
-
 .cell1, .cell2, .cell3 {
     width: 100vw;
     height: 89vh;
     background-size:cover;
 }
+
+/*КЛІТИНКА ПЕРША*/
 
 .cell1 {
     display: flex;
@@ -131,31 +134,65 @@ header {
 }
 
 .block1 {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-/*    background-color: #FFBC73;*/
+    flex:1;
+    width: auto;
+    padding: 2vw;
+    height: 50vh;
+    border-radius: 25px;
     background-color: rgba(255, 255, 255,0.5);
-    margin-bottom: 15%;
 }
 
 .block1 h2 {
     font-size: 300%;
-    color: #1d7373;
+    color: #000;
     font-family: 'Ubuntu', Bold;
- 
 }
 
-.block1 p {
-    color: #1d7373;
+.sup-text {
+    color: #000;
     font-family: 'Ubuntu', light italic;
+    text-align: center;
+    font-size: 145%;
+    margin-top: 5vh;
 }
 
+.button1 {
+    margin-bottom: 10vh;
+    margin-top: 15vh;
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button1:hover {
+    opacity: 1;
+}
+
+.button1 p {
+    font-size: 150%;
+    font-family: 'Ubuntu', Regular;
+    color: black;
+}
+
+/*КЛІТИНКА ДРУГА*/
 .cell2 {
     background-image: url("images/slide2.jpg");
 }
 
+/*КЛІТИНКА ТРЕТЯ*/
 .cell3 {
     background-image: url("images/slide3.jpg");
 }
