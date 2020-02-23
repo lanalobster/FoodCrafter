@@ -171,7 +171,7 @@ header {
     padding: 16px 32px;
     text-align: center;
     font-size: 16px;
-    opacity: 0.6;
+    opacity: 0.8;
     transition: 0.3s;
     display: inline-block;
     text-decoration: none;
@@ -235,16 +235,127 @@ header {
     font-weight: 600;
 }
 
+/*Популярні рецепти*/
 .popular-recipe-block {
     width: 100vw;
-    height: 80vh;
+    height: 70vh;
     background-color: #A62500;
-    padding: 0;
+    padding-top: 10px;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-/*Footer*/
+.popular-recipe-block-header {
+    font-family: 'Lora', Light;
+    font-size: 300%;    
+    color: white;
+}
 
+.popular-recipe-block-cells {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.recipe1, .recipe2, .recipe3, .recipe4 {
+    width: 20vw;
+    height: 45vh;
+    margin: 20px;
+    background-size: 20vw 45vh;
+    transition: 1s;
+}
+
+.recipe1:hover, .recipe2:hover, .recipe3:hover, .recipe4:hover {
+    transform: scale(1.08);
+}
+
+.recipe1 {
+    background-image: url("images/recipe1.jpg");
+}
+
+.recipe2 {
+    background-image: url("images/recipe2.jpg");
+}
+
+.recipe3 {
+    background-image: url("images/recipe3.jpg");
+}
+
+.recipe4 {
+    background-image: url("images/recipe4.jpg");
+}
+
+/*Ispiration*/
+.inspiration-block{
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.inspiration-image{
+    background-image: url("images/inspiration-image.jpg") ;
+    background-size: cover;
+    width: 50vw;
+    height: 100%;  
+
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: flex-end; 
+
+}
+
+.inspiration-text{
+    background-color: white;
+    color: #1d7373;
+    max-width: 50vw;
+    line-height: 1.5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inspiration-cite{
+    color: black;
+    padding: 2vw;
+    height: 30vh;
+    width: 50vh;
+    font-family: 'Ubuntu', light italic;
+    font-size: 130%;
+    line-height: 1.5;
+    text-align:;
+}
+
+.inspiration-text p{
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 2%
+}
+
+.inspiration-text-header{
+    font-family: 'Lora', Light;
+    font-size: 300%;
+}
+
+.inspiration-text-suptext{
+    text-indent: 5%;
+    font-family: 'Ubuntu', light italic;
+    font-size: 125%;
+}
+
+.inspiration-text-bottom{
+    font-family: 'Ubuntu', light italic;
+    font-size: 150%;
+    font-weight: bold;
+}
+/*Footer*/
 footer{
     background-color: #191919;
     color: #dbd9d9;  
