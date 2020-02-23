@@ -115,25 +115,23 @@ header {
     height: 88vh;
 }
 
-.cell1 {
+
+.cell1, .cell2, .cell3 {
     width: 100vw;
     height: 88vh;
-    background-image: url("images/slide1.jpg");
     background-size:cover;
+}
+
+.cell1 {
+    background-image: url("images/slide1.jpg");
 }
 
 .cell2 {
-    width: 100vw;
-    height: 88vh;
     background-image: url("images/slide2.jpg");
-    background-size:cover;
 }
 
 .cell3 {
-    width: 100vw;
-    height: 88vh;
     background-image: url("images/slide3.jpg");
-    background-size:cover;
 }
 
 .flickity-page-dots {
