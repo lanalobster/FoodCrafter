@@ -112,14 +112,52 @@ header {
 footer{
     background-color: #191919;
     color: #dbd9d9;  
+}
+
+.footer-block{
     width: 100vw;
-    height: 25vh;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .columns{
+    height: 15vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+}
+
+.columns h4{
+    color: #adacac;
+    text-align: center;
+    font-weight: normal;
+}
+
+.left-columns{
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.right-columns{
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.addresses, .emails, .social-profiles{
+   margin: 2vh; 
+}
+
+.addresses{
+    width: 17vw;
 }
 
 .addresses ul {
@@ -130,39 +168,28 @@ footer{
     list-style-type: none;
 }
 
-.col1, .col2{
-    margin: 1%;
-}
-
-.col3{
-    margin-top: 1%;
-    margin-left: 52%;
-}
-
 .addresses li{
-    margin: 3%;
-}
-
-.email p{
-    margin: 3%;
+    margin: 1vh;
 }
 
 .addresses address{
     font-style: normal;
 }
 
-.columns h4{
-    color: #adacac;
-    text-align: center;
-    font-weight: normal;
+.emails{
+    width: 13vw;
 }
 
-.rights p{
-    margin-left: 1%;
-    color: #adacac;
+.emails p{
+    margin-top: 1vh;
 }
 
-.socialProfiles ul{
+.social-profiles{
+    margin-right: 2vw;
+    width: 16vw;
+}
+
+.social-profiles ul{
     margin-top: 7px;
     list-style-type: none;
     display: flex;
@@ -185,4 +212,16 @@ footer{
 
 .fa:hover{
     opacity: 0.7;
+}
+
+.rights{
+    height: 5vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.rights p{
+    margin-left: 2vh;
+    color: #adacac;
 }
