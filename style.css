@@ -33,14 +33,14 @@
     align-items: center;
     flex:1;
     width: auto;
-    padding: 2vw;
+    padding: 20px;
     height: 50vh;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .block1 h2 {
-    font-size: 300%;
+    font-size: 40px;
     color: white;
     font-family: 'Ubuntu', Bold;
 }
@@ -49,7 +49,7 @@
     color: white;
     font-family: 'Ubuntu', light italic;
     text-align: center;
-    font-size: 145%;
+    font-size: 22px;
     margin-top: 5vh;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .button1 p {
-    font-size: 150%;
+    font-size: 22px%;
     font-family: 'Ubuntu', Regular;
     color: black;
 }
@@ -90,7 +90,12 @@
 }
 
 .flickity-page-dots {
-    display: none;
+    position: absolute;
+    top: 86vh;
+}
+
+.flickity-page-dots .is-selected {
+    background-color: #fff !important;
 }
 
 /*Описовий блок*/
@@ -106,12 +111,13 @@
 
 .desciption-block-header {
     font-family: 'Lora', Light;
-    font-size: 300%;
+    font-size: 50px;
+    text-align: center;
 }
 
 .desciption-block-supporttext {
     font-family: 'Ubuntu', light italic;
-    font-size: 125%;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,8 +134,7 @@
 
 /*Популярні рецепти*/
 .popular-recipe-block {
-    width: 100vw;
-    height: 70vh;
+    padding-bottom: 30px;
     background-color: #A62500;
     padding-top: 10px;
     margin: 0;
@@ -149,16 +154,18 @@
     margin-top: 5vh;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
 .recipe1, .recipe2, .recipe3, .recipe4 {
-    width: 20vw;
-    height: 45vh;
+    width: 275px;
+    height: 275px;
     margin: 20px;
-    background-size: 20vw 45vh;
     transition: 1s;
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 
 .recipe1:hover, .recipe2:hover, .recipe3:hover, .recipe4:hover {

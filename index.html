@@ -161,14 +161,6 @@
               <p>©2020 FoodCraft.com. All Rights Reserved.</p>
           </div> 
         </footer>
-<!--
-     <form action="" method="get">
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname" value="John"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" value="Doe">
-        </form>
--->
     </div>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script>
@@ -176,7 +168,9 @@
         var flkty = new Flickity( elem, {
           // options
           cellAlign: 'left',
-          contain: true
+          contain: true,
+          autoPlay: true,
+          wrapAround: true
         });
 
         // element argument can be a selector string

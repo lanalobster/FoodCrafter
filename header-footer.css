@@ -163,6 +163,7 @@ footer{
 }
 
 .socialProfiles ul{
+    margin-top: 7px;
     list-style-type: none;
     display: flex;
     flex-direction: row;
