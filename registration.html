@@ -4,52 +4,60 @@
     <meta charset="UTF-8">
     <title>FoodCrafter</title>
     <link rel="stylesheet" type="text/css" href="header-footer.css">
-    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" type="text/css" href="registration.css">
     <link href="https://fonts.googleapis.com/css?family=Headland+One&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-      <!--For the icons:-->
+    <!--For the icons:-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src ="scripts/registration.js"></script>
 </head>
 <body>
-    <div id="block-body">
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <h1>
-                        <span class="food">Food</span><span class="craft">Craft</span>
-                    </h1>  
-                </a>
-            </div>
-            <div class="top-menu">
-                <ul>
-                    <li><a href="kitchen.html">Кухня</a></li>
-                    <li><a href="">Рецепти</a></li>
-                    <li><a href="">Замовити</a></li>
-                </ul>
-            </div>
-            <div class="block-top-auth">
-                <p><a href="login.html">Вхід</a></p>
-                <p><a href="registration.html">Реєстрація</a></p>
-            </div>
-        </header>
-        <div class = "main-block">
-           <div class="central-block">
-                <h2>Вхід</h2>
-                <form class="login-form" action="" method="get">
-                   <label for="uname"><b>Електронна пошта</b></label>
-                    <input type="text" placeholder="Введіть електронну пошту" name="uname" required>
-                    <label for="psw"><b>Пароль</b></label>
-                    <input type="password" placeholder="Введіть пароль" name="psw" required>
-                    <button class = "login-button" type="submit">Увійти</button>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Запам'ятати мене
-                    </label>
-                </form>
-            </div>
-        </div>  
-      <footer>
+   <div id="block-body">
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <h1>
+                    <span class="food">Food</span><span class="craft">Craft</span>
+                </h1>  
+            </a>
+        </div>
+        <div class="top-menu">
+            <ul>
+                <li><a href="kitchen.html">Кухня</a></li>
+                <li><a href="">Рецепти</a></li>
+                <li><a href="">Замовити</a></li>
+            </ul>
+        </div>
+        <div class="block-top-auth">
+            <p><a href="login.html">Вхід</a></p>
+            <p><a href="registration.html">Реєстрація</a></p>
+        </div>
+    </header>
+    <div class = "main-block">
+       <div class="central-block">
+            <h2>Реєстрація</h2>
+            <form class="registration-form" action="" method="get">
+                <label for="nick-name"><b>Нік</b></label>
+                <input type="text" placeholder="Введіть нік" name="nick-name" required>
+                <div class = "sex">
+                    <p>Виберіть стать: </p>
+                    <span><input name="man" type="radio" value="man">Чоловік</span>
+                    <span><input name="woman" type="radio" value="woman"> Жінка</span>
+                    <span><input name="skip" type="radio" value="skip" checked>Не бажаю вказувати</span>
+                </div>
+                <label for="uname"><b>Електронна пошта</b></label>
+                <input type="text" placeholder="Введіть електронну пошту" name="uname" required>
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" placeholder="Введіть пароль" name="psw" required>
+                <label for="psw-repeat"><b>Підтвердження паролю</b></label>
+                <input type="password" placeholder="Введіть пароль ще раз" name="psw-repeat" required>
+                <button class = "registration-button" type="submit">Зарєєструватися</button>
+            </form>
+        </div>
+    </div>  
+    <footer>
         <div class = "footer-block">
             <div class = "columns">
                 <div class = "left-columns">
@@ -106,9 +114,6 @@
             </div> 
         </div>
         </footer>
-<!--
-
--->
-    </div>
+    
 </body>
 </html>

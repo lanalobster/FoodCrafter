@@ -2,9 +2,9 @@ const addIngredient = () => {
 	const input = document.getElementById("input-ingredient");
 	const list = document.getElementById("list-ingredient");
 	if (list.childNodes.length >= 10) {
-		return;
+		return false;
 	} else if (input.value === ""){
-		return;
+		return false;
 	}
 	const item = document.createElement('li');
 	item.id = `ingredientID${list.childNodes.length}`;
