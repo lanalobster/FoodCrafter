@@ -1,0 +1,106 @@
+.main-block {
+    height: 88vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.input-block {
+    background-color: #191919;
+    height: 88vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 6px solid #A62500;
+    border-bottom: 6px solid #A62500;
+}
+
+.main-header {
+    background-color: #A62500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 3px;
+}
+
+.main-header h1 {
+    font-family: 'Lora', Light;
+    font-size: 30px;    
+    color: white;
+}
+
+.input-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+input[type=text] {
+    width: 230px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.add-button {
+    background-color: #f4511e;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 230px;
+}
+
+.output-block {
+    background-color: #191919;
+    height: 88vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 6px solid #A62500;
+    border-bottom: 6px solid #A62500;
+}
+
+#list-ingredient {
+    list-style: none;
+    width: 80%;
+}
+
+
+.item-ingredient {
+    color: white;
+    background-color: grey;
+    border: 3px solid #A62500;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.delete-button {
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+}
+
+.ingredient-name-block{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.ingredient-name {
+    font-family: 'Ubuntu', Bold;
+    text-align: center;
+    font-size: 20px;
+}
