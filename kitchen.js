@@ -9,10 +9,10 @@ const addIngredient = () => {
 	const item = document.createElement('li');
 	item.id = `ingredientID${list.childNodes.length}`;
 	console.log(list.childNodes.length);
-	item.innerHTML = ` <div class="item-ingredient">
-				    	<div class="delete-button-block">
-				    		<button class="delete-button" onclick="removeIngredient(ingredientID${list.childNodes.length})">X</button>
-				    	</div>
+	item.innerHTML =`<div class="item-ingredient">
+					   	<div class="delete-button-block">
+					   		<button class="delete-button" onclick="removeIngredient(ingredientID${list.childNodes.length})">X</button>
+					   	</div>
 				    	<div class="ingredient-name-block">
 				    		<span class="ingredient-name">${input.value}</span>
 				    	</div>
