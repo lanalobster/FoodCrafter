@@ -8,7 +8,6 @@
 /*Лівий блок*/
 .input-block {
     background-color: #191919;
-    height: 88vh;
     display: flex;
     flex-basis: 20%;
     flex-direction: column;
@@ -71,7 +70,6 @@ input[type=text] {
 .output-block {
     background-image: url("images/banana.jpg");
     background-size: cover;
-    height: 88vh;
     display: flex;
     flex-basis: 30%; 
     flex-direction: column;
@@ -118,6 +116,11 @@ input[type=text] {
 
 
 .find-recipe-block {
+    background-color: #191919;
     display: flex;
     flex-basis: 50%;
+    flex-direction: column;
+    align-items: center;
+    border-right: 6px solid #A62500;
+    border-bottom: 6px solid #A62500;
 }
