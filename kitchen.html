@@ -26,13 +26,13 @@
             </div>
             <div class="top-menu">
                 <ul>
-                    <li><a href="">Кухня</a></li>
+                    <li><a href="kitchen.html">Кухня</a></li>
                     <li><a href="">Рецепти</a></li>
                     <li><a href="">Замовити</a></li>
                 </ul>
             </div>
             <div class="block-top-auth">
-                <p><a href="">Вхід</a></p>
+                <p><a href="login.html">Вхід</a></p>
                 <p><a href="">Реєстрація</a></p>
             </div>
        </header>
@@ -43,8 +43,10 @@
 	       		</div>
 	       		<div class="input-body">
 	       			<img class="input-img" src="images/foodlogo.png" alt="">
-		       		<input id="input-ingredient" type="text" placeholder="Введіть назву інгрідієнта" name="uname" required>
-		       		<button class = "add-button" type="submit" onclick="addIngredient()">Добавити</button>
+	       			<form class="add-form" action="" method="get">
+			       		<input id="input-ingredient" type="text" placeholder="Введіть назву інгрідієнта" name="uname" required>
+			       		<button class = "add-button" type="button" onclick="addIngredient()">Добавити</button>
+			       	</form>
 	       		</div>
 	       </div>
 	       <div class="output-block">

@@ -2,19 +2,23 @@
     height: 88vh;
     display:flex;
     flex-direction: row;
-    justify-content: flex-start;
     margin: 0;
 }
 
+/*Лівий блок*/
 .input-block {
     background-color: #191919;
     height: 88vh;
-    width: 300px;
     display: flex;
+    flex-basis: 20%;
     flex-direction: column;
     align-items: center;
     border-right: 6px solid #A62500;
     border-bottom: 6px solid #A62500;
+}
+
+.input-img {
+    width: 100%;
 }
 
 .main-header {
@@ -32,14 +36,20 @@
     color: white;
 }
 
-.input-body{
+.input-body {
     display: flex;
     flex-direction: column;
     align-items: center
 }
 
+.add-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center 
+}
+
 input[type=text] {
-    width: 230px;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -54,14 +64,16 @@ input[type=text] {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 230px;
+    width: 100%;
 }
 
+/*Середній блок*/
 .output-block {
-    background-color: #191919;
+    background-image: url("images/banana.jpg");
+    background-size: cover;
     height: 88vh;
-    width: 30vw;
     display: flex;
+    flex-basis: 30%; 
     flex-direction: column;
     align-items: center;
     border-right: 6px solid #A62500;
@@ -72,7 +84,6 @@ input[type=text] {
     list-style: none;
     width: 80%;
 }
-
 
 .item-ingredient {
     color: white;
@@ -103,4 +114,16 @@ input[type=text] {
     font-family: 'Ubuntu', Bold;
     text-align: center;
     font-size: 20px;
+}
+
+
+.find-recipe-block {
+    display: flex;
+    flex-basis: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-block {
+    flex-direction: column;
+}
 }
