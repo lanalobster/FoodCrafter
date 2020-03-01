@@ -12,8 +12,6 @@
     flex-basis: 20%;
     flex-direction: column;
     align-items: center;
-    border-right: 6px solid #A62500;
-    border-bottom: 6px solid #A62500;
 }
 
 .input-img {
@@ -74,8 +72,6 @@ input[type=text] {
     flex-basis: 30%; 
     flex-direction: column;
     align-items: center;
-    border-right: 6px solid #A62500;
-    border-bottom: 6px solid #A62500;
 }
 
 #list-ingredient {
@@ -85,17 +81,16 @@ input[type=text] {
 
 .item-ingredient {
     color: white;
-    background-color: grey;
-    border: 3px solid #A62500;
-    border-radius: 25px;
     display: flex;
     align-items: center;
     padding: 5px;
     margin-top: 10px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .delete-button {
-    background-color: red;
+    background-color: white;
     width: 30px;
     height: 30px;
     border: none;
@@ -114,13 +109,11 @@ input[type=text] {
     font-size: 20px;
 }
 
-
+/*Третій блок*/
 .find-recipe-block {
-    background-color: #191919;
+    background-color: white;
     display: flex;
     flex-basis: 50%;
     flex-direction: column;
     align-items: center;
-    border-right: 6px solid #A62500;
-    border-bottom: 6px solid #A62500;
 }

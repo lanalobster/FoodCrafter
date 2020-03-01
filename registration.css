@@ -66,12 +66,17 @@ label{
 
 .sex p{
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .sex span{
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.radiobox-list li {
+    list-style: none;
+    display: inline;
 }
 
 button {
