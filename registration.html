@@ -38,14 +38,14 @@
     <div class = "main-block">
        <div class="central-block">
             <h2>Реєстрація</h2>
-            <form class="registration-form" action="" method="get">
+            <form class="registration-form" action="" method="post">
                 <label for="nick-name"><b>Нік</b></label>
-                <input type="text" placeholder="Введіть нік" name="nick-name" required>
+                <input type="text" placeholder="Введіть нік" name="nick-name" id="nick-name" required>
                 <div class = "sex">
                     <p>Виберіть стать: </p>
-                    <span><input name="man" type="radio" value="man">Чоловік</span>
-                    <span><input name="woman" type="radio" value="woman"> Жінка</span>
-                    <span><input name="skip" type="radio" value="skip" checked>Не бажаю вказувати</span>
+                    <span><input name="sex" type="radio" value="man">Чоловік</span>
+                    <span><input name="sex" type="radio" value="woman"> Жінка</span>
+                    <span><input name="sex" type="radio" value="skip" checked>Не бажаю вказувати</span>
                 </div>
                 <label for="uname"><b>Електронна пошта</b></label>
                 <input type="text" placeholder="Введіть електронну пошту" name="uname" required>
