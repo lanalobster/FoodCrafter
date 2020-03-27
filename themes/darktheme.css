@@ -1,0 +1,12 @@
+body {
+    filter: invert(100%) hue-rotate(180deg); /* hue-rotate возвращает тона обратно */
+    background-color: black;
+}
+
+.cell1, .cell2, .cell3, .recipe1, .recipe2, .recipe3, .recipe4, .inspiration-image, .main-block {
+    filter: invert(100%) hue-rotate(180deg);
+}
+
+footer {
+    filter: invert(100%) hue-rotate(180deg);
+}

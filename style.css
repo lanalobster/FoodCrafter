@@ -74,7 +74,7 @@
 }
 
 .button1 p {
-    font-size: 22px%;
+    font-size: 22px;
     font-family: 'Ubuntu', Regular;
     color: black;
 }
@@ -228,7 +228,6 @@
     font-family: 'Ubuntu', light italic;
     font-size: 130%;
     line-height: 1.5;
-    text-align:;
 }
 
 .inspiration-text-header{

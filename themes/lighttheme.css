@@ -1,0 +1,9 @@
+body {
+    filter: invert(0%) hue-rotate(0);
+    background-color: white;
+}
+
+.cell1, .cell2, .cell3 .recipe1, .recipe2, .recipe3, .recipe4, .inspiration-image, .main-block {
+    filter: invert(0%) hue-rotate(0deg);
+}
+
