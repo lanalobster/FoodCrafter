@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta charset="UTF-8">
+    <title>FoodCrafter</title>
+    <link rel="stylesheet" type="text/css" href="../index/header-footer.css">
+    <link rel="stylesheet" type="text/css" href="kitchen.css">
+    <link href="https://fonts.googleapis.com/css?family=Headland+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+      <!--For the icons:-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Kitchen</title>
+</head>
+<body>
+	<div id="block-body">
+        <header>
+            <div class="logo">
+                <a href="../index/index.html">
+                    <h1>
+                        <span class="food">Food</span><span class="craft">Craft</span>
+                    </h1>  
+                </a>
+            </div>
+            <div class="top-menu">
+                <ul>
+                    <li><a href="kitchen.html">Кухня</a></li>
+                    <li><a href="">Рецепти</a></li>
+                    <li><a href="">Замовити</a></li>
+                </ul>
+            </div>
+            <div class="block-top-auth">
+                <p><a href="../login/login.html">Вхід</a></p>
+                <p><a href="../registration/registration.html">Реєстрація</a></p>
+            </div>
+        </header>
+       <div class="main-block">
+	       <div class="input-block">
+	       		<div class="main-header">
+	       			<h1>Вибір інгрідієнтів</h1>
+	       		</div>
+	       		<div class="input-body">
+	       			<img class="input-img" src="../images/foodlogo.png" alt="">
+	       			<form class="add-form" action="" method="get">
+			       		<input id="input-ingredient" type="text" placeholder="Введіть назву інгрідієнта" name="uname" required>
+			       		<button class = "add-button" type="button" onclick="addIngredient()">Добавити</button>
+			       	</form>
+	       		</div>
+	       </div>
+	       <div class="output-block">
+	       		<div class="main-header">
+	       			<h1>Ваші інгрідієнти</h1>
+	       		</div>
+				<ol id="list-ingredient">
+				  
+				</ol>
+	       </div>
+	       <div class="find-recipe-block">
+	       		<div class="main-header">
+	       			<h1>Пропоновані рецепти</h1>
+	       		</div>
+	       </div>			
+       </div>
+	  <footer>
+	        <div class = "footer-block">
+	            <div class = "columns">
+	                <div class = "left-columns">
+	                    <div class = "addresses">
+	                        <h4>НАС МОЖНА ЗНАЙТИ ТУТ</h4>
+	                        <hr>
+	                        <ul>
+	                            <li>
+	                                <address>
+	                                    Sakharova St, 31<br>
+	                                    3rd Floor<br>
+	                                    Lviv, 72080<br>
+	                                    Ukraine<br>
+	                                </address>
+	                             </li>
+	                             <li>
+	                                 <address>
+	                                     Zubrivska St, 25A<br>
+	                                     1st Floor<br>
+	                                     Lviv, 74209<br>
+	                                     Ukraine<br>
+	                                 </address>
+	                             </li>
+	                        </ul>
+	                        </div>
+	                         <div class = "emails">
+	                            <h4>НАПИШІТЬ НАМ</h4>
+	                            <hr>
+	                            <p>lana.gudyma15@gmail.com</p>
+	                            <p>or4uk15@gmail.com</p>
+	                        </div>
+	                </div>
+	                <div class = "right-columns">
+	                     <div class = "social-profiles">
+							<h4>МИ У СОЦІАЛЬНИХ МЕРЕЖАХ</h4>
+							<hr>
+							<ul>
+								<li>
+									<a class = " fa fa-instagram" title = "FoodCraft Instagram Page" href="https://www.instagram.com/lanahudyma?r=nametag"></a>
+								</li>
+								<li>
+									<a class = "fa fa-facebook" title = "FoodCraft Facebook Page" href="https://www.facebook.com/ira.hudyma">
+									</a>
+								</li>
+								<li>
+									<a class = "fa fa-telegram" title = "FoodCraft Telegram Page" href="https://t.me/Ygleplastic28"></a>
+								</li>
+							</ul>
+						   </div>
+						   <div class="switcher">
+								<label class="switch">
+									<input id="switch-theme" type="checkbox">
+									<span class="slider round"></span>
+								</label>
+							</div>
+	                 </div>
+	            </div>
+	            <div class = "rights">
+	                <p>©2020 FoodCraft.com. All Rights Reserved.</p>
+	            </div> 
+	        </div>
+	</footer>
+	<script src="kitchen.js"></script>
+	<script src="themes/switcher.js"></script>
+</body>
+</html>

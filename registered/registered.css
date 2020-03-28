@@ -1,0 +1,43 @@
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-block {
+    width: 100vw;
+    height: 88vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a62500;
+    background-image: url(../images/background-login.jpg);
+    background-size: 100vw 88vh;
+    flex-basis: 50vw;
+}
+
+.central-block {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+    padding: 2vw;
+    height: 25vh;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.5);    
+}
+
+.header2 {
+    color:white;
+    font-family: 'Lora', Light;
+    font-size: 40px;
+    padding-top: 10px;
+}
+
+.paragraph {
+    padding: 8px;
+    font-family: 'Ubuntu', light italic;
+    font-size: 20px;
+    color: white;
+}

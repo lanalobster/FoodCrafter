@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FoodCrafter</title>
+    <link rel="stylesheet" type="text/css" href="../index/header-footer.css">
+    <link rel="stylesheet" type="text/css" href="registration.css">
+    <link href="https://fonts.googleapis.com/css?family=Headland+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <!--For the icons:-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   <div id="block-body">
+    <header>
+        <div class="logo">
+            <a href="../index/index.html">
+                <h1>
+                    <span class="food">Food</span><span class="craft">Craft</span>
+                </h1>  
+            </a>
+        </div>
+        <div class="top-menu">
+            <ul>
+                <li><a href="../kitchen/kitchen.html">Кухня</a></li>
+                <li><a href="">Рецепти</a></li>
+                <li><a href="">Замовити</a></li>
+            </ul>
+        </div>
+        <div class="block-top-auth">
+            <p><a href="../login/login.html">Вхід</a></p>
+            <p><a href="registration.html">Реєстрація</a></p>
+        </div>
+    </header>
+    <div class = "main-block">
+       <div class="central-block">
+            <h2>Реєстрація</h2>
+            <form class="registration-form" name="registration-form" action="registered.html" method="post">
+                <label for="nick-name"><b>Нік</b></label>
+                <div class = "nick-line">
+                    <input type="text" placeholder="Введіть нік" name="nick-name" id="nick-name" required>
+                    <button class = "generate-button" type="button" onclick="generateNick()">Згенерувати</button>
+                </div>
+                <div class = "sex">
+                    <p>Виберіть стать: </p>
+                    <ol class="radiobox-list">
+                      <li>
+                        <span><input name="sex" type="radio" value="man">Чоловік</span>
+                      </li>
+                      <li>
+                        <span><input name="sex" type="radio" value="woman"> Жінка</span>
+                      </li>
+                      <li>
+                        <span><input name="sex" type="radio" value="none" checked>Не бажаю вказувати</span>
+                      </li>
+                    </ol>
+                </div>
+                <label for="email"><b>Електронна пошта</b></label>
+                <input type="text" placeholder="Введіть електронну пошту" name="email" required>
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" placeholder="Введіть пароль" name="psw" required>
+                <label for="psw-repeat"><b>Підтвердження паролю</b></label>
+                <input type="password" placeholder="Введіть пароль ще раз" name="psw_repeat" required>
+                <button class = "registration-button" type="button" onclick="isValid()">Зарєєструватися</button>
+            </form>
+        </div>
+    </div>  
+    <footer>
+        <div class = "footer-block">
+            <div class = "columns">
+                <div class = "left-columns">
+                    <div class = "addresses">
+                        <h4>НАС МОЖНА ЗНАЙТИ ТУТ</h4>
+                        <hr>
+                        <ul>
+                            <li>
+                                <address>
+                                    Sakharova St, 31<br>
+                                    3rd Floor<br>
+                                    Lviv, 72080<br>
+                                    Ukraine<br>
+                                </address>
+                             </li>
+                             <li>
+                                 <address>
+                                     Zubrivska St, 25A<br>
+                                     1st Floor<br>
+                                     Lviv, 74209<br>
+                                     Ukraine<br>
+                                 </address>
+                             </li>
+                        </ul>
+                        </div>
+                         <div class = "emails">
+                            <h4>НАПИШІТЬ НАМ</h4>
+                            <hr>
+                            <p>lana.gudyma15@gmail.com</p>
+                            <p>or4uk15@gmail.com</p>
+                        </div>
+                </div>
+                <div class = "right-columns">
+                     <div class = "social-profiles">
+                        <h4>МИ У СОЦІАЛЬНИХ МЕРЕЖАХ</h4>
+                        <hr>
+                        <ul>
+                            <li>
+                                <a class = " fa fa-instagram" title = "FoodCraft Instagram Page" href="https://www.instagram.com/lanahudyma?r=nametag"></a>
+                            </li>
+                            <li>
+                                <a class = "fa fa-facebook" title = "FoodCraft Facebook Page" href="https://www.facebook.com/ira.hudyma">
+                                </a>
+                            </li>
+                            <li>
+                                <a class = "fa fa-telegram" title = "FoodCraft Telegram Page" href="https://t.me/Ygleplastic28"></a>
+                            </li>
+                        </ul>
+                     </div>
+                     <div class="switcher">
+                        <label class="switch">
+                            <input id="switch-theme" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                 </div>
+            </div>
+            <div class = "rights">
+                <p>©2020 FoodCraft.com. All Rights Reserved.</p>
+            </div> 
+        </div>
+        </footer>
+   </div>
+   <script src="registration.js"></script>
+   <script src="themes/switcher.js"></script>
+</body>
+</html>
