@@ -14,7 +14,6 @@ head.appendChild(link);
 
 document.getElementById('switch-theme').addEventListener('change', ev => {
     let btn = ev.target;
-
     if (btn.checked) {
         link.href = '../themes/darktheme.css'; 
         localStorage.setItem('themeStyle', 'dark'); 

@@ -1,3 +1,15 @@
+const inputs=["nick-name","email", "psw", "psw_repeat"];
+
+for (let input of inputs) {
+	console.log(input);
+	document.getElementById(input).addEventListener("focus", ev => {
+		ev.target.style.color = 'black';
+	});
+	document.getElementById(input).addEventListener("blur", ev => {
+		ev.target.style.color = 'grey';
+	});
+}
+
 const isPswValid = () => {
 	let form = document.forms["registration-form"];
 	if (form.psw.value != form.psw_repeat.value) {
@@ -41,7 +53,7 @@ const foodNames = ["Pasta", "Fries", "Ice Cream" ,
 	 "Cheesecake", "Cheese",  "Bread"];
 
 const getRandomInteger = (max) => {
-		return Math.floor(Math.random() * max );
+	return Math.floor(Math.random() * max );
 }
 
 const generateNick = () =>{

@@ -159,9 +159,9 @@ footer {
 
 .switcher {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding-right: 50px;
+    padding-right: 70px;
 }
 
 .addresses, .emails, .social-profiles{
@@ -300,3 +300,22 @@ footer {
   .slider.round:before {
     border-radius: 50%;
   }
+
+  .switcher
+
+  .print-button {
+    display: flex;
+    color:black;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    padding: .5em 2em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;
+    margin-right: 40px;
+  }
+
+  .print-button:hover { background: rgba(255,255,255,.2); }
+  .print-button:active { background: rgba(255,255,255,.2);; }

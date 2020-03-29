@@ -12,3 +12,6 @@ var flkty = new Flickity( elem, {
 var flkty = new Flickity( '.main-carousel', {
     // options
 });
+
+document.getElementById("button-1").addEventListener("mouseover", ev => {document.getElementById('button-1').style.border = '3px solid #f00500'});
+document.getElementById("button-1").addEventListener("mouseout", ev => {document.getElementById('button-1').style.border = '0px'});

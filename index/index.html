@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="block-body">
-        <header>
+        <header id="main-header">
             <div class="logo">
                 <a href="index.html">
                     <canvas id = "logo-canvas"></canvas>
@@ -36,7 +36,7 @@
                 <p><a href="../registration/registration.html">Реєстрація</a></p>
             </div>
         </header>
-        <div class="main-carousel">
+        <div id="main-carousel" class="main-carousel">
             <div class="carousel-cell">
                 <div class="cell1">
                     <div class="block1">
@@ -45,7 +45,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur </p>
                             <p>Lorem ipsum dolor sit amet</p>
                         </div>   
-                        <a href="../kitchen\kitchen.html"><button class="button1">Перейти до кухні!</button></a>
+                        <a href="../kitchen\kitchen.html"><button id="button-1" class="button1">Перейти до кухні!</button></a>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                 <p>Всі вкусняхи для тебе!</p>
             </div>
         </div>
-        <div class="popular-recipe-block">
+        <div id="popular-recipe-block" class="popular-recipe-block">
             <div class="popular-recipe-block-header">
                 <p>Наші пропозиції</p>
             </div>
@@ -86,7 +86,7 @@
                 <div class="recipe4"></div>
             </div>
         </div>
-        <div class ="inspiration-block">
+        <div id="inspiration-block" class ="inspiration-block">
             <div class = "inspiration-image">
                <div class = "inspiration-cite">
                    <p>
@@ -106,7 +106,7 @@
                 </div>      
             </div>
         </div>
-        <footer>
+        <footer id="main-footer">
         <div class = "footer-block">
             <div class = "columns">
                 <div class = "left-columns">
@@ -156,7 +156,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="switcher">
+                    <div id="switcher" class="switcher">
+                        <button id="print-button" class="print-button" onclick="changePage()">Друк</button>
                         <label class="switch">
                             <input id="switch-theme" type="checkbox">
                             <span class="slider round"></span>
@@ -173,7 +174,7 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="../themes/switcher.js"></script>
     <script src = "flickty.js"></script>    
-    <script src = "logo.js"></script>    
-    </script>
+    <script src = "logo.js"></script>
+    <script src = "print.js"></script>       
 </body>
 </html>
