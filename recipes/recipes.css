@@ -1,0 +1,6 @@
+.histogram-block{
+    height: 88vh;
+    display:flex;
+    flex-direction: row;
+    margin: 0;
+}
