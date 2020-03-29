@@ -16,8 +16,8 @@ const addIngredient = () => {
 				    	<div class="ingredient-name-block">
 				    		<span class="ingredient-name">${input.value}</span>
 				    	</div>
-				    </div>`;
-	
+					</div>`;			
+
 	if (list.childNodes.length <= 1) {
 		list.appendChild(item);
 		console.log("option 1");
@@ -27,6 +27,8 @@ const addIngredient = () => {
 	}
 	input.value = "";
 }
+
+
 
 const removeIngredient = (ingredientID) => {
 	ingredientID.parentNode.removeChild(ingredientID);
