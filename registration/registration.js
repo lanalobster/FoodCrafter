@@ -1,4 +1,4 @@
-const inputs=["nick-name","email", "psw", "psw-repeat"];
+const inputs=["nick-name","email", "psw", "pswRepeat"];
 
 for (let input of inputs) {
 	console.log(input);
@@ -12,7 +12,7 @@ for (let input of inputs) {
 
 const isPswValid = () => {
 	let form = document.forms["registration-form"];
-	if (form.psw.value != form.psw-repeat.value) {
+	if (form.psw.value != form.pswRepeat.value) {
 		alert('Паролі не співпадають!');
 		return false;
 	} else {
