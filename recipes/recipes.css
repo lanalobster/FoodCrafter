@@ -1,15 +1,122 @@
-.histogram-block{
-    height: 88vh;
-    width: 50%;
-    display:flex;
-    flex-direction: column;
-    margin: 0;
+.main-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
 }
 
-.histogram-block p{
-    padding-top: 5px;
-    text-align: center;
-    font-family: 'Lora', serif;
-    font-size: 25px;
-    color: #A62500;
+.main-title {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: 'Lora', Light;
+    font-size: 34px;    
+    color: #1d7373;
+    margin: 10px;
 }
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 10px;
+    width: 100vw;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 0px;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+.image-block {
+    padding: 0px;
+    margin: 0px;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.cocoa-image {
+    width: 400px;
+    padding: 0px;
+    margin: 0px;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.ingredients-block {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.ingredients-title {
+    display:flex;
+    justify-content: center;
+    font-family: 'Lora', Light;
+    font-size: 30px;    
+    color: #1d7373;
+    margin: 10px;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 0px;
+    margin: 10px;
+}
+
+.recipe-title-block {
+    display:flex;
+    justify-content: center;
+    font-family: 'Lora', Light;
+    font-size: 30px;    
+    color: #1d7373;
+    margin: 10px;
+}
+
+.recipe-stage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-star;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+}
+
+.stage-number {
+    display:flex;
+    justify-content: center;
+    font-family: 'Lora', Light;
+    font-size: 18px;  
+    padding: 0px;
+    margin: 0px;  
+    color: #1d7373;
+}
+
+.stage-description {
+    font-family: 'Ubuntu', light italic;
+    font-size: 14px;    
+    color: #1d7373;
+    padding: 0px;
+    margin: 0px;
+    max-width: 800px;
+    min-width: 400px;
+}
+
+.recipe-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

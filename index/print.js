@@ -7,7 +7,7 @@ const toPrint = (x) => {
         $(".switcher").hide();
         $(".desciption-block").css("color", "black");
     } else {
-        $(".main-header").show();
+        $("#main-header").show();
         $(".popular-recipe-block").show();
         $(".inspiration-block").show();
         $(".main-carousel").show();

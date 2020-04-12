@@ -25,11 +25,32 @@ const addIngredient = () => {
 		list.insertBefore(item, list.childNodes[0]);
 		console.log("option 2");
 	}
-	input.value = "";
 }
-
-
 
 const removeIngredient = (ingredientID) => {
-	ingredientID.parentNode.removeChild(ingredientID);
+	alert("remove");
+	$("#ingredientID").fadeOut();
+	//ingredientID.parentNode.removeChild(ingredientID);
 }
+
+$(document).ready(() => {
+    $("#button-1").mouseenter(() => {
+        $("#button-1").css("border", "3px solid #f00500");
+    });
+    
+    $("#button-1").mouseleave(() => {
+        $("#button-1").css("border", "0px");
+	});
+	
+	// <Ляна>
+    $(":button").click(() => {
+		if(!($("#input-ingredient").val())) {
+			alert("Введіть назву інгредієнта");
+		}
+	});
+
+	$(".item-ingredient").dblclick(() => {
+		alert("Введіть назву інгредієнта");
+	});
+	// </Ляна>
+});

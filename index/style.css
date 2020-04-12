@@ -157,6 +157,8 @@
     align-items: center;
 }
 
+
+
 .recipe1, .recipe2, .recipe3, .recipe4 {
     width: 275px;
     height: 275px;
@@ -166,9 +168,9 @@
     background-repeat: no-repeat; 
 }
 
-.recipe1:hover, .recipe2:hover, .recipe3:hover, .recipe4:hover {
+/* .recipe1:hover, .recipe2:hover, .recipe3:hover, .recipe4:hover {
     transform: scale(1.08);
-}
+} */
 
 .recipe1 {
     background-image: url("../images/recipe1.jpg");

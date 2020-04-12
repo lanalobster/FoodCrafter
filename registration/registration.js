@@ -29,9 +29,12 @@ const isEmailValid = () => {
 };
 
 const isValid = () => {
+	changeInputColor();
 	if (!isEmailValid()) {
 		return false;
 	} else if (!isPswValid()) {
+		return false;
+	} else if(isAnyFieldEmpty()) {
 		return false;
 	}
 	document.forms["registration-form"].submit();
@@ -58,4 +61,37 @@ const generateNick = () =>{
 	nickInput.value = foodAdjectives[getRandomInteger(foodAdjectives.length)] + 
 		"_" + foodNames[getRandomInteger(foodNames.length)] + "_" + 
 		date.getMilliseconds();
+}
+// <Ляна>
+const changeInputColor = () =>{
+	$(document).ready(() => {
+		$("input").each(function(){
+			if($(this).val() == "")
+				$(this).css('backgroundColor', '#FF7B40');
+		})	
+	});
+}
+
+$(document).ready(() => {
+	$("input").change(function(){
+		$(this).css('backgroundColor', 'white');
+	})	
+});
+// </Ляна>
+
+const isAnyFieldEmpty = () =>{
+	let isEmpty = false;
+	$("input").each(function(){
+			if($(this).val() == "") {
+				isEmpty = true;
+			
+				return false;
+			}
+	});	
+	if(!isEmpty) {
+		return false;
+	} else {
+		alert("Будь ласка, заповніть всі поля");
+		return true;
+	}
 }
