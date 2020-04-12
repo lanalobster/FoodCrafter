@@ -1,14 +1,10 @@
-const inputs=["nick-name","email", "psw", "pswRepeat"];
+$("input").focus(function() {
+	$(this).css("color", "black");
+});
 
-for (let input of inputs) {
-	console.log(input);
-	document.getElementById(input).addEventListener("focus", ev => {
-		ev.target.style.color = 'black';
-	});
-	document.getElementById(input).addEventListener("blur", ev => {
-		ev.target.style.color = 'grey';
-	});
-}
+$("input").blur(function() {
+	$(this).css("color", "grey");
+});
 
 const isPswValid = () => {
 	let form = document.forms["registration-form"];

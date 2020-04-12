@@ -1,18 +1,18 @@
 const toPrint = (x) => {
     if (x.matches) {
-        document.getElementById("main-header").style.display = 'none';
-        document.getElementById("popular-recipe-block").style.display = 'none';
-        document.getElementById("inspiration-block").style.display = 'none';
-        document.getElementById("main-carousel").style.display = 'none';
-        document.getElementById("switcher").style.display = 'none';
-        document.getElementById("desciption-block").style.color = 'black';
+        $("#main-header").hide();
+        $(".popular-recipe-block").hide();
+        $(".inspiration-block").hide();
+        $(".main-carousel").hide();
+        $(".switcher").hide();
+        $(".desciption-block").css("color", "black");
     } else {
-        document.getElementById("main-header").style.display = 'flex';
-        document.getElementById("popular-recipe-block").style.display = 'flex';
-        document.getElementById("inspiration-block").style.display = 'flex';
-        document.getElementById("main-carousel").style.display = 'block';
-        document.getElementById("switcher").style.display = 'flex';
-        document.getElementById("desciption-block").style.color = '#1d737';
+        $(".main-header").show();
+        $(".popular-recipe-block").show();
+        $(".inspiration-block").show();
+        $(".main-carousel").show();
+        $(".switcher").show();
+        $(".desciption-block").css("color", '#1d737');
     }
 }
 
@@ -21,11 +21,11 @@ toPrint(x);
 x.addListener(toPrint);
 
 const changePage = () => {
-   document.getElementById("main-header").style.display = 'none';
-   document.getElementById("popular-recipe-block").style.display = 'none';
-   document.getElementById("inspiration-block").style.display = 'none';
-   document.getElementById("main-carousel").style.display = 'none';
-   document.getElementById("switcher").style.display = 'none';
+   $("#main-header").hide();
+   $("#popular-recipe-block").hide();
+   $("#inspiration-block").hide();
+   $("#main-carousel").hide();
+   $("#switcher").hide();
 
    window.print();
 }

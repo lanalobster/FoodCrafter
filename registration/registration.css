@@ -59,10 +59,6 @@ h2 {
     width: 30%; 
 }
 
-input {
-    color: grey;
-}
-
 input[type=text], input[type=password] {
     width: 30vw;
     padding: 12px 20px;

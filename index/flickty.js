@@ -1,3 +1,4 @@
+"use strict";
 const elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
     // options
@@ -13,11 +14,13 @@ var flkty = new Flickity( '.main-carousel', {
     // options
 });
 
-document.getElementById("button-1").addEventListener("mouseover", ev => {
-    document.getElementById('button-1').style.border = 
-    '3px solid #f00500'
-});
-document.getElementById("button-1").addEventListener("mouseout", ev => {
-    document.getElementById('button-1').style.border = 
-    '0px'
+
+$(document).ready(() => {
+    $("#button-1").mouseenter(() => {
+        $("#button-1").css("border", "3px solid #f00500");
+    });
+    
+    $("#button-1").mouseleave(() => {
+        $("#button-1").css("border", "0px");
+    });
 });
