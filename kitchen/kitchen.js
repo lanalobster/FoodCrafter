@@ -26,12 +26,13 @@ const addIngredient = () => {
 		console.log("option 2");
 	}
 }
-
+// </Ляна>
 const removeIngredient = (ingredientID) => {
-	alert("remove");
-	$("#ingredientID").fadeOut();
-	//ingredientID.parentNode.removeChild(ingredientID);
+	$("#" + ingredientID.id).fadeOut("fast", function() {
+		ingredientID.parentNode.removeChild(ingredientID);
+	});
 }
+// <Ляна>
 
 $(document).ready(() => {
     $("#button-1").mouseenter(() => {

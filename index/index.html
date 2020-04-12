@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>FoodCrafter</title>
     <link rel="stylesheet" type="text/css" href="header-footer.css">
@@ -13,18 +15,12 @@
       <!--For the icons:-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<style>
-    #logo-canvas {
-    height: 80;
-    width: 80;
-  }
 </style>
 <body>
     <div id="block-body">
         <header id="main-header">
             <div class="logo">
                 <a href="index.html">
-                    <canvas id = "logo-canvas"></canvas>
                     <h1>
                         <span class="food">Food</span><span class="craft">Craft</span>
                     </h1>  
@@ -162,7 +158,7 @@
                         </ul>
                     </div>
                     <div id="switcher" class="switcher">
-                        <button id="print-button" class="print-button" onclick="changePage()">Друк</button>
+                        <button type="button" class="btn btn-default" onclick="changePage()">Друк</button>
                         <label class="switch">
                             <input id="switch-theme" type="checkbox">
                             <span class="slider round"></span>
@@ -181,7 +177,6 @@
     <script type='text/javascript' src='https:/s/ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js'></script>    
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> 
     <script src="flickty.js"></script>    
-    <script src="logo.js"></script>
     <script src="print.js"></script>      
     <script src="style.js"></script>
 </body>
