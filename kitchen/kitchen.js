@@ -11,7 +11,9 @@ const addIngredient = () => {
 	console.log(list.childNodes.length);
 	item.innerHTML =`<div class="item-ingredient">
 					   	<div class="delete-button-block">
-					   		<button class="delete-button" onclick="removeIngredient(ingredientID${list.childNodes.length})">X</button>
+							   <button class="delete-button" onclick="removeIngredient(ingredientID${list.childNodes.length})">
+							   		<span class="glyphicon glyphicon-remove"></span>  
+							   </button>
 					   	</div>
 				    	<div class="ingredient-name-block">
 				    		<span class="ingredient-name">${input.value}</span>
