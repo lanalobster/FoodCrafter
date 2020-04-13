@@ -1,3 +1,4 @@
+// </Orest>
 $("input").focus(function() {
 	$(this).css("color", "black");
 });
@@ -5,7 +6,7 @@ $("input").focus(function() {
 $("input").blur(function() {
 	$(this).css("color", "grey");
 });
-
+// </Orest>
 const isPswValid = () => {
 	let form = document.forms["registration-form"];
 	if (form.psw.value != form.pswRepeat.value) {

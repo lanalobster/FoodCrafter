@@ -15,6 +15,7 @@ var flkty = new Flickity( '.main-carousel', {
 });
 
 
+// </Orest>
 $(document).ready(() => {
     $("#button-1").mouseenter(() => {
         $("#button-1").css("border", "3px solid #f00500");
@@ -24,3 +25,4 @@ $(document).ready(() => {
         $("#button-1").css("border", "0px");
     });
 });
+// </Orest>

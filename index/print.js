@@ -1,3 +1,4 @@
+// </Orest>
 const toPrint = (x) => {
     if (x.matches) {
         $("#main-header").hide();
@@ -29,3 +30,4 @@ const changePage = () => {
 
    window.print();
 }
+// </Orest>
