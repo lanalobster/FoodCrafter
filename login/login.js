@@ -1,13 +1,13 @@
 // <Ляна>
 $(document).ready(() => {
-	$("#uname").keydown(function(key){
+	$("#email").keydown(function(key){
 		if(key.which == 40) {
-			$("#psw").focus();
+			$("#pwd").focus();
 		}
 	});
-	$("#psw").keyup(function(key){
+	$("#pwd").keyup(function(key){
 		if(key.which == 38) {
-			$("#uname").focus();
+			$("#email").focus();
 		}
 	});
 });	
