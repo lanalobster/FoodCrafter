@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">   
     <title>FoodCrafter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="header-footer.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="themes/lighttheme.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Headland+One&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -100,84 +102,89 @@
                 <hr>
                 <div class = "inspiration-text-suptext">
                      <p>Одне слово, а скільки щастя! Кожен інгредієнт, змішуючись з іншими, робить справжнє диво. Дуже хочеться вивчити кожен шматочок їжі, дізнатися, як вона робиться. Чим оригінальніше блюдо, тим більше воно подобається людям. Вам теж хочеться навчитися створювати таку красу? </p>
-                    <p>Щоб бути справжнім майстром на власній кухні, не потрібно закінчувати спеціальну школу. Кожна людина може розвивати хист до кулінарії, і це не міф. Стати шеф-кухарем може кожен, хто має доступ до інтернету та набір продуктів, необхідних для створення шедевру.</p>
                 </div> 
                 <div class = "inspiration-text-bottom">
                     <p>Успіхів!</p>
                 </div>      
             </div>
         </div>
-        <footer id="main-footer">
-        <div class = "footer-block">
-            <div class = "columns">
-                <div class = "left-columns">
-                    <div class = "addresses">
-                        <h4>НАС МОЖНА ЗНАЙТИ ТУТ</h4>
-                        <hr>
-                        <ul>
-                            <li>
-                                <address>
-                                    Sakharova St, 31<br>
-                                    3rd Floor<br>
-                                    Lviv, 72080<br>
-                                    Ukraine<br>
-                                </address>
-                             </li>
-                             <li>
-                                 <address>
-                                     Zubrivska St, 25A<br>
-                                     1st Floor<br>
-                                     Lviv, 74209<br>
-                                     Ukraine<br>
-                                 </address>
-                             </li>
-                        </ul>
-                        </div>
-                         <div class = "emails">
+
+        <footer>
+            <div class="container-fluid footer-block">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class = "addresses">
+                            <h4>НАС МОЖНА ЗНАЙТИ ТУТ</h4>
+                            <hr>
+                            <ul class="list-inline">
+                                <li>
+                                    <address>
+                                        Sakharova St, 31<br>
+                                        3rd Floor<br>
+                                        Lviv, 72080<br>
+                                        Ukraine<br>
+                                    </address>
+                                </li>
+                                <li>
+                                    <address>
+                                        Zubrivska St, 25A<br>
+                                        1st Floor<br>
+                                        Lviv, 74209<br>
+                                        Ukraine<br>
+                                    </address>
+                                </li>
+                            </ul>
+                            </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class = "emails">
                             <h4>НАПИШІТЬ НАМ</h4>
                             <hr>
                             <p>lana.gudyma15@gmail.com</p>
                             <p>or4uk15@gmail.com</p>
                         </div>
-                </div>
-                <div class = "right-columns">
-                     <div class = "social-profiles">
-                        <h4>МИ У СОЦІАЛЬНИХ МЕРЕЖАХ</h4>
-                        <hr>
-                        <ul>
-                            <li>
-                                <a class = " fa fa-instagram" title = "FoodCraft Instagram Page" href="https://www.instagram.com/lanahudyma?r=nametag"></a>
-                            </li>
-                            <li>
-                                <a class = "fa fa-facebook" title = "FoodCraft Facebook Page" href="https://www.facebook.com/ira.hudyma">
-                                </a>
-                            </li>
-                            <li>
-                                <a class = "fa fa-telegram" title = "FoodCraft Telegram Page" href="https://t.me/Ygleplastic28"></a>
-                            </li>
-                        </ul>
                     </div>
-                    <div id="switcher" class="switcher">
+                    <div class="col-sm-6">
+                        <div class = "social-profiles">
+                            <h4>МИ У СОЦІАЛЬНИХ МЕРЕЖАХ</h4>
+                            <hr>
+                            <ul class="list-inline">
+                                <li>
+                                    <a class="btn btn-lg btn-floating btn-social-icon btn-instagram" title = "FoodCraft Instagram Page" href="https://www.instagram.com/lanahudyma?r=nametag">
+                                        <span class="fa fa-instagram"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn btn-lg btn-social-icon btn-facebook" title = "FoodCraft Facebook Page" href="https://www.facebook.com/ira.hudyma">
+                                        <span class="fa fa-facebook"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn btn-lg btn-social-icon btn-telegram" title = "FoodCraft Telegram Page" href="https://t.me/Ygleplastic28">
+                                        <span class="fa fa-telegram"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row rights">
+                    <div class="col-sm-11">
+                        <p>©2020 FoodCraft.com. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-sm-1">
                         <button type="button" class="btn btn-default" onclick="changePage()">Друк</button>
-                        <label class="switch">
-                            <input id="switch-theme" type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
                     </div>
                 </div>
             </div>
-            <div class = "rights">
-                <p>©2020 FoodCraft.com. All Rights Reserved.</p>
-            </div> 
-        </div>
         </footer>
     </div>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="../themes/switcher.js"></script>
     <script type='text/javascript' src='https:/s/ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js'></script>    
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> 
-    <script src="flickty.js"></script>    
     <script src="print.js"></script>      
     <script src="style.js"></script>
+    <script src="flickty.js"></script>
 </body>
 </html>

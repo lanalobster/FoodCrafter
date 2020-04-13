@@ -119,66 +119,26 @@ footer {
     color: #dbd9d9;  
 }
 
-.footer-block{
-    width: 100vw;
-    height: 20vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.columns{
-    height: 15vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.columns h4{
+footer h4{
     color: #adacac;
     text-align: center;
     font-weight: normal;
 }
-
-.left-columns{
-    width: 50vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.right-columns{
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-.switcher {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-right: 70px;
-}
-
 .addresses, .emails, .social-profiles{
-   margin: 2vh; 
-}
+    margin: 2vh; 
+ }
+ 
+ .addresses{
+     float: left;
+ }
 
-.addresses{
-    width: 17vw;
-}
+ .emails{
+    float: left;
+ }
 
-.addresses ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    list-style-type: none;
-}
+ .social-profiles{
+     float: right;
+ }
 
 .addresses li{
     margin: 1vh;
@@ -188,17 +148,9 @@ footer {
     font-style: normal;
 }
 
-.emails{
-    width: 13vw;
-}
 
 .emails p{
     margin-top: 1vh;
-}
-
-.social-profiles{
-    margin-right: 2vw;
-    width: 16vw;
 }
 
 .social-profiles ul{
@@ -206,21 +158,18 @@ footer {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: center; 
+    align-items: flex-start; 
 }
 
-.fa {
-    padding: 8px;
-    font-size: 30px;
-    width: 20px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
+.social-profiles li{
+    padding: 3px;
+    margin: 2px;
     border-radius: 50%;
+    font-size: 20px;  
     background-color: #dbd9d9;
     color: #191919;
-} 
+}
 
  .fa:hover{
     opacity: 0.7;
