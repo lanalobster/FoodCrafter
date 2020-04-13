@@ -129,7 +129,7 @@ footer h4{
  }
  
  .addresses{
-     float: left;
+    float: left;
  }
 
  .emails{
@@ -137,7 +137,7 @@ footer h4{
  }
 
  .social-profiles{
-     float: right;
+    float: right;
  }
 
 .addresses li{
