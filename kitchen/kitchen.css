@@ -95,6 +95,7 @@ input[type=text] {
     height: 30px;
     border: none;
     border-radius: 50%;
+    color: black;
 }
 
 .ingredient-name-block{
