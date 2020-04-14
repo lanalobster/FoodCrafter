@@ -78,7 +78,6 @@ $(document).ready(() => {
 		$(this).css('backgroundColor', 'white');
 	})	
 });
-// </Ляна>
 
 const isAnyFieldEmpty = () =>{
 	let isEmpty = false;
@@ -96,3 +95,4 @@ const isAnyFieldEmpty = () =>{
 		return true;
 	}
 }
+// </Ляна>

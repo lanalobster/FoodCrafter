@@ -37,13 +37,14 @@ const removeIngredient = (ingredientID) => {
 // <Ляна>
 
 $(document).ready(() => {
+	// <Орест>
     $("#button-1").mouseenter(() => {
         $("#button-1").css("border", "3px solid #f00500");
     });
-    
     $("#button-1").mouseleave(() => {
         $("#button-1").css("border", "0px");
 	});
+	// </Орест>
 	
 	// <Ляна>
     $(":button").click(() => {
