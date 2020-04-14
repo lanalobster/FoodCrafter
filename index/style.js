@@ -7,11 +7,11 @@ $(document).ready(() => {
         $(event.target).css('transform', 'scale(1)');
     });
 
-    $("[href].fa").hover(function(event){
-        $(event.target).css('opacity', '0.7');
+    $("[href].auth-link").hover(function(event){
+        $(event.target).css('color', '#A62500');
     },
     function(){
-        $(event.target).css('opacity', '1');
+        $(event.target).css('color', '#1d7373');
     });
 });
 // </Ляна>
