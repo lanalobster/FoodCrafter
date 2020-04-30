@@ -155,7 +155,13 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class = "social-profiles">
+                        <div class="card">
+                            <p><i class="fa fa-user"></i></p>
+                            <?php require "./visitorCounter/visitorCounter.php"; ?>
+                            <h3><?php echo @$visitorCount?></h3>
+                            <p>Людей переглянули цю сторінку!</p>
+                        </div>
+                        <!-- <div class = "social-profiles">
                             <h4>МИ У СОЦІАЛЬНИХ МЕРЕЖАХ</h4>
                             <hr>
                             <ul class="list-inline">
@@ -175,7 +181,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="row rights">

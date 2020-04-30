@@ -266,5 +266,16 @@ footer h4{
     margin-right: 40px;
   }
 
+  .card{
+    float: right;
+    padding: 16px;
+    text-align: center;
+    color: white;
+ }
+
+ i.fa {
+    font-size:50px;
+ }
+
   .print-button:hover { background: rgba(255,255,255,.2); }
   .print-button:active { background: rgba(255,255,255,.2);; }
