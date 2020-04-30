@@ -37,7 +37,7 @@
             </div>
             <div class="block-top-auth">
                 <p><a href="../login/login.html"class="auth-link">Вхід</a></p>
-                <p><a href="../registration/registration.html"class="auth-link">Реєстрація</a></p>
+                <p><a href="../registration/registration.php"class="auth-link">Реєстрація</a></p>
             </div>
         </header>
         <div id="main-carousel" class="main-carousel">

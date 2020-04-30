@@ -7,41 +7,6 @@ $("input").blur(function() {
 	$(this).css("color", "grey");
 });
 // </Orest>
-const isPswValid = () => {
-	let form = document.forms["registration-form"];
-	if (form.psw.value != form.pswRepeat.value) {
-		alert('Паролі не співпадають!');
-		return false;
-	} else {
-		return true;
-	}
-};
-
-const isEmailValid = () => {
-	let form = document.forms["registration-form"]; 
-	let text = form.email.value;
-	let emailRE = /\S+@\S+\.\S+/;
-	if (emailRE.test(text)) {
-	  return true; 
-	} else {
-	  alert( "Неправильний формат пошти" );
-	  return false;
-	}
-};
-
-const isValid = () => {
-	changeInputColor();
-	if (!isEmailValid()) {
-		return false;
-	} else if (!isPswValid()) {
-		return false;
-	} else if(isAnyFieldEmpty()) {
-		return false;
-	}
-	document.forms["registration-form"].submit();
-	alert("Ви успішно зареєструвались!");
-};
-
 const foodAdjectives = ["Warm", "Bitter", "Disgusting",
 	"Awesome", "Bittersweet", "Frosty", "Grilled",
 	"Scrambled", "Sweet"]
@@ -78,21 +43,4 @@ $(document).ready(() => {
 		$(this).css('backgroundColor', 'white');
 	})	
 });
-
-const isAnyFieldEmpty = () =>{
-	let isEmpty = false;
-	$("input").each(function(){
-			if($(this).val() == "") {
-				isEmpty = true;
-			
-				return false;
-			}
-	});	
-	if(!isEmpty) {
-		return false;
-	} else {
-		alert("Будь ласка, заповніть всі поля");
-		return true;
-	}
-}
 // </Ляна>
