@@ -1,3 +1,7 @@
+<?php 
+    require "../sessionInfo.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,14 +30,19 @@
             </div>
             <div class="top-menu">
                 <ul>
-                    <li><a href="../kitchen/kitchen.html">Кухня</a></li>
+                    <li><a href="../kitchen/kitchen.php">Кухня</a></li>
                     <li><a href="">Рецепти</a></li>
                     <li><a href="">Замовити</a></li>
                 </ul>
             </div>
             <div class="block-top-auth">
-                <p><a href="../login/login.php">Вхід</a></p>
-                <p><a href="../registration/registration.php">Реєстрація</a></p>
+                <?php if (isset($_SESSION["nickName"])) :?>
+                    <p><?php echo @$_SESSION["nickName"]; ?></p>
+                    <p> <a href="/logout.php">Вийти</p>
+                <?php else : ?>
+                    <p><a href="../login/login.php">Вхід</a></p>
+                    <p><a href="../registration/registration.php">Реєстрація</a></p>
+                <?php endif;?> 
             </div>
         </header>
         <div class="main-title-container">

@@ -1,3 +1,7 @@
+<?php 
+    require "./sessionInfo.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,14 +34,19 @@
             </div>
             <div class="top-menu">
                 <ul>
-                    <li><a href="../kitchen/kitchen.html">Кухня</a></li>
-                    <li><a href="../recipes/recipes.html">Рецепти</a></li>
+                    <li><a href="./kitchen/kitchen.php">Кухня</a></li>
+                    <li><a href="./recipes/recipes.php">Рецепти</a></li>
                     <li><a href="">Замовити</a></li>
                 </ul>
             </div>
             <div class="block-top-auth">
-                <p><a href="../login/login.php"class="auth-link">Вхід</a></p>
-                <p><a href="../registration/registration.php"class="auth-link">Реєстрація</a></p>
+                <?php if (isset($_SESSION["nickName"])) :?>
+                    <p><?php echo @$_SESSION["nickName"]; ?></p>
+                    <p> <a href="/logout.php">Вийти</p>
+                <?php else : ?>
+                    <p><a href="./login/login.php">Вхід</a></p>
+                    <p><a href="../registration/registration.php">Реєстрація</a></p>
+                <?php endif;?> 
             </div>
         </header>
         <div id="main-carousel" class="main-carousel">
@@ -49,7 +58,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur </p>
                             <p>Lorem ipsum dolor sit amet</p>
                         </div>   
-                        <a href="../kitchen/kitchen.html" id="button-1" class="button1" 
+                        <a href="./kitchen/kitchen.php" id="button-1" class="button1" 
                         style = "font-size: 16px; color: white;">
                             Перейти до кухні!
                         </a>

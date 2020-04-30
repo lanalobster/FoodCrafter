@@ -1,3 +1,7 @@
+<?php 
+    require "../sessionInfo.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,36 +31,57 @@
             </div>
             <div class="top-menu">
                 <ul>
-                    <li><a href="../kitchen/kitchen.html">Кухня</a></li>
-                    <li><a href="../recipes/recipes.html">Рецепти</a></li>
+                    <li><a href="../kitchen/kitchen.php">Кухня</a></li>
+                    <li><a href="../recipes/recipes.php">Рецепти</a></li>
                     <li><a href="">Замовити</a></li>
                 </ul>
             </div>
             <div class="block-top-auth">
-                <p><a href="login.php">Вхід</a></p>
-                <p><a href="../registration/registration.php">Реєстрація</a></p>
-            </div>
+                <?php if (isset($_SESSION["nickName"])) :?>
+                    <p><?php echo @$_SESSION["nickName"]; ?></p>
+                    <p> <a href="/logout.php">Вийти</p>
+                <?php else : ?>
+                    <p><a href="login.php">Вхід</a></p>
+                    <p><a href="../registration/registration.php">Реєстрація</a></p>
+                <?php endif;?>    
+            </div>  
         </header>
-        <div class = "main-block">
+        <div class="main-block">
            <div class="central-block">
                 <h2>Вхід</h2>
                 <!-- <Orest> -->
-                <form action="../index/index.html">
-                    <div class="form-group">
-                      <label for="email">Електронна пошта</label>
-                      <input type="email" class="form-control" placeholder="Enter email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="pwd">Пароль</label>
-                      <br>
-                      <input type="password" class="form-control" placeholder="Enter password" id="pwd" required>
-                    </div>
-                    <div class="form-group form-check">
-                      <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox"> Remember me
-                      </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                <?php 
+                    $hardCodeNickName = "Bruh";
+                    $hardCodeEmail = "or4uk15@gmail.com";
+                    $hardCodePdw = "password";
+                    $data = $_POST;
+
+                    if (isset($data['do_login'])) {
+                        $errors = array();
+                        if ($data['email'] != $hardCodeEmail) {
+                            $errors[] = 'Немає користувача з таким email' ;
+                        }
+
+                        if ($data['pwd'] != $hardCodePdw) {
+                            $errors[] = 'Введений неправильний пароль';
+                        }
+
+                        if (empty($errors)) {
+                            echo '<div style="color: RGB(153, 255, 153); font-size: 18px;">Дякую, '.$hardCodeNickName.'</div><hr>';
+                            $_SESSION["nickName"] = $hardCodeNickName;
+                        } else {
+                            echo '<div style="color: red;">'.array_shift($errors).'</div><hr>';
+                        }
+                    }
+                
+                
+                ?>
+                <form class="login-form" action="login.php" method="post">
+                    <label for="uname"><b>Електронна пошта</b></label>
+                    <input type="text" placeholder="Введіть електронну пошту" id = "uname" name="email">
+                    <label for="psw"><b>Пароль</b></label>
+                    <input type="password" placeholder="Введіть пароль" id = "psw" name="pwd">
+                    <button name="do_login" class="login-button" type="submit">Увійти</button>
                 </form>
                 <!-- </Orest> -->
             </div>
