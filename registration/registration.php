@@ -32,7 +32,7 @@
             </ul>
         </div>
         <div class="block-top-auth">
-            <p><a href="../login/login.html">Вхід</a></p>
+            <p><a href="../login/login.php">Вхід</a></p>
             <p><a href="registration.php">Реєстрація</a></p>
         </div>
     </header>
