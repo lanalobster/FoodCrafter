@@ -22,7 +22,7 @@
     <div id="block-body">
         <header id="main-header">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.php">
                     <h1>
                         <span class="food">Food</span><span class="craft">Craft</span>
                     </h1>  
