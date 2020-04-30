@@ -56,8 +56,10 @@
 	       		</div>
 	       		<div class="input-body">
 	       			<img class="input-img" src="../images/foodlogo.png" alt="">
+                    <p id="hints"></p>
 	       			<div class="add-form">
-			       		<input id="input-ingredient" type="text" placeholder="Введіть назву інгредієнта" name="uname" required>
+			       		<input autocomplete="off" id="input-ingredient" type="text"
+                            placeholder="Введіть назву інгредієнта" name="uname" onkeyup="showHints(this.value)" required>
 			       		<button class = "add-button" type="button" onclick="addIngredient()">Добавити</button>
 					</div>
 	       		</div>

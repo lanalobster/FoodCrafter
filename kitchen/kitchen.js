@@ -34,6 +34,29 @@ const removeIngredient = (ingredientID) => {
 		ingredientID.parentNode.removeChild(ingredientID);
 	});
 }
+
+const showHints = (input) => {
+	if(input == "")
+	{
+		$("#hints").hide();
+		return;
+	}
+	$.get("http://localhost:8080/FoodCrafter/kitchen/showHints.php", 
+	{
+		input: input
+	}, function(data){
+		
+		var foundHints = eval(data);
+		if(String(foundHints) == "null")
+		{
+			$("#hints").hide();
+			return;
+		}
+		$("#hints").show();
+		$("#hints").text("Можливо ви мали на увазі " + foundHints);  
+		//document.getElementById("hint").value =  + foundHints;
+	});
+}
 // <Ляна>
 
 $(document).ready(() => {

@@ -96,7 +96,7 @@
                 <div class = "nick-line">
                     <input type="text" placeholder="Введіть нік" name="nickName" id="nick-name" value="<?php echo @$data['nickName']; ?>">
                     <!-- <Ляна> -->
-                    <button type="button" class="btn btn-default generate-button" onclick="generateNick()">Згенерувати</button>
+                    <button type="button" id="generate-button" class="btn btn-default generate-button">Згенерувати</button>
                     <!-- </Ляна> -->
                 </div>
                 <label for="email"><b>Електронна пошта</b></label>

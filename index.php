@@ -45,7 +45,7 @@
                     <p> <a href="/logout.php">Вийти</p>
                 <?php else : ?>
                     <p><a href="./login/login.php">Вхід</a></p>
-                    <p><a href="../registration/registration.php">Реєстрація</a></p>
+                    <p><a href="./registration/registration.php">Реєстрація</a></p>
                 <?php endif;?> 
             </div>
         </header>

@@ -7,27 +7,25 @@ $("input").blur(function() {
 	$(this).css("color", "grey");
 });
 // </Orest>
-const foodAdjectives = ["Warm", "Bitter", "Disgusting",
-	"Awesome", "Bittersweet", "Frosty", "Grilled",
-	"Scrambled", "Sweet"]
 
-const foodNames = ["Pasta", "Fries", "Ice Cream" ,
-	 "Bread", "Rice", "Pancakes", "Burger", "Pizza",
-	 "Pumpkin", "Pie", "Chicken", "Banana", "Apple", 
-	 "Bagel", "Muffins", "Sauce", "Peanut", "Cake",
-	 "Cheesecake", "Cheese",  "Bread"];
+// <Ляна>
+$("#generate-button").click(function(){
+	var xhttp;
+	if (window.XMLHttpRequest) {
+		xhttp = new XMLHttpRequest();
+	} else {
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	 xhttp.onreadystatechange = function() {
+	 if (this.readyState == 4 && this.status == 200) {
+		 document.getElementById("nick-name").value = this.responseText;
+	}
+	};
+		xhttp.open("GET", "http://localhost:8080/FoodCrafter/registration/generateNick.php", true);
+		xhttp.send();
+  });
+// </Ляна>
 
-const getRandomInteger = (max) => {
-	return Math.floor(Math.random() * max );
-}
-
-const generateNick = () =>{
-	let date = new Date();
-	let nickInput = document.getElementById('nick-name');
-	nickInput.value = foodAdjectives[getRandomInteger(foodAdjectives.length)] + 
-		"_" + foodNames[getRandomInteger(foodNames.length)] + "_" + 
-		date.getMilliseconds();
-}
 // <Ляна>
 const changeInputColor = () =>{
 	$(document).ready(() => {
