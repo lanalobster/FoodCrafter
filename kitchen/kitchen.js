@@ -45,8 +45,7 @@ const showHints = (input) => {
 	{
 		input: input
 	}, function(data){
-		
-		var foundHints = eval(data);
+		var foundHints = data;
 		if(String(foundHints) == "null")
 		{
 			$("#hints").hide();
@@ -54,7 +53,6 @@ const showHints = (input) => {
 		}
 		$("#hints").show();
 		$("#hints").text("Можливо ви мали на увазі " + foundHints);  
-		//document.getElementById("hint").value =  + foundHints;
 	});
 }
 // <Ляна>

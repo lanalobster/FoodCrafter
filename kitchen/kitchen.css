@@ -14,6 +14,10 @@
     align-items: center;
 }
 
+#hints{
+    color: white;
+}
+
 .input-img {
     width: 100%;
 }
