@@ -19,6 +19,10 @@ const addIngredient = () => {
 				    		<span class="ingredient-name">${input.value}</span>
 				    	</div>
 					</div>`;			
+	$.post("http://localhost:8080/FoodCrafter/kitchen/addIngredient.php",
+		{
+			ingredientName: input.value
+		});
 
 	if (list.childNodes.length <= 1) {
 		list.appendChild(item);
@@ -30,6 +34,11 @@ const addIngredient = () => {
 }
 // </Ляна>
 const removeIngredient = (ingredientID) => {
+	var ingredientName = $("#" + ingredientID.id).find("span.ingredient-name").text();
+	$.post("http://localhost:8080/FoodCrafter/kitchen/deleteIngredient.php",
+		{
+			ingredientName: ingredientName
+		});
 	$("#" + ingredientID.id).fadeOut("fast", function() {
 		ingredientID.parentNode.removeChild(ingredientID);
 	});
