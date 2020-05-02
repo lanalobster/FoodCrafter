@@ -21,7 +21,7 @@ $("#generate-button").click(function(){
 		 document.getElementById("nick-name").value = this.responseText;
 	}
 	};
-		xhttp.open("GET", "http://localhost:8080/FoodCrafter/registration/generateNick.php", true);
+		xhttp.open("GET", "./generateNick.php", true);
 		xhttp.send();
   });
 // </Ляна>

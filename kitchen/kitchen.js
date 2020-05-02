@@ -19,7 +19,7 @@ const addIngredient = () => {
 				    		<span class="ingredient-name">${input.value}</span>
 				    	</div>
 					</div>`;			
-	$.post("http://localhost:8080/FoodCrafter/kitchen/addIngredient.php",
+	$.post("../kitchen/addIngredient.php",
 		{
 			ingredientName: input.value
 		});
@@ -31,11 +31,12 @@ const addIngredient = () => {
 		list.insertBefore(item, list.childNodes[0]);
 		console.log("option 2");
 	}
+	input.value = "";
 }
 // </Ляна>
 const removeIngredient = (ingredientID) => {
 	var ingredientName = $("#" + ingredientID.id).find("span.ingredient-name").text();
-	$.post("http://localhost:8080/FoodCrafter/kitchen/deleteIngredient.php",
+	$.post("../kitchen/deleteIngredient.php",
 		{
 			ingredientName: ingredientName
 		});
@@ -50,18 +51,18 @@ const showHints = (input) => {
 		$("#hints").hide();
 		return;
 	}
-	$.get("http://localhost:8080/FoodCrafter/kitchen/showHints.php", 
+	$.get("../kitchen/showHints.php", 
 	{
 		input: input
-	}, function(data){
-		var foundHints = data;
-		if(String(foundHints) == "null")
-		{
-			$("#hints").hide();
-			return;
-		}
-		$("#hints").show();
-		$("#hints").text("Можливо ви мали на увазі " + foundHints);  
+	},	data => {
+			var foundHints = data;
+			if(String(foundHints) == "null")
+			{
+				$("#hints").hide();
+				return;
+			}
+			$("#hints").show();
+			$("#hints").text("Можливо ви мали на увазі " + foundHints);  
 	});
 }
 // <Ляна>
@@ -75,12 +76,4 @@ $(document).ready(() => {
         $("#button-1").css("border", "0px");
 	});
 	// </Орест>
-	
-	// <Ляна>
-    $(":button").click(() => {
-		if(!($("#input-ingredient").val())) {
-			alert("Введіть назву інгредієнта");
-		}
-	});
-	// </Ляна>
 });

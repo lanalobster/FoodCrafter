@@ -41,7 +41,7 @@
             </div>
             <div class="block-top-auth">
                 <?php if (isset($_SESSION["nickName"])) :?>
-                    <p><?php echo @$_SESSION["nickName"]; ?></p>
+                    <p class="nickname"><?php echo @$_SESSION["nickName"]; ?></p>
                     <p> <a href="/logout.php">Вийти</p>
                 <?php else : ?>
                     <p><a href="./login/login.php">Вхід</a></p>
