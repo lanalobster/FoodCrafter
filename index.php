@@ -158,30 +158,9 @@
                         <div class="card">
                             <p><i class="fa fa-user"></i></p>
                             <?php require "./visitorCounter/visitorCounter.php"; ?>
-                            <h3><?php echo @$visitorCount?></h3>
+                            <h3><?php echo $visitorCount?></h3>
                             <p>Людей переглянули цю сторінку!</p>
                         </div>
-                        <!-- <div class = "social-profiles">
-                            <h4>МИ У СОЦІАЛЬНИХ МЕРЕЖАХ</h4>
-                            <hr>
-                            <ul class="list-inline">
-                                <li>
-                                    <a class="btn btn-lg btn-floating btn-social-icon btn-instagram" title = "FoodCraft Instagram Page" href="https://www.instagram.com/lanahudyma?r=nametag">
-                                        <span class="fa fa-instagram"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="btn btn-lg btn-social-icon btn-facebook" title = "FoodCraft Facebook Page" href="https://www.facebook.com/ira.hudyma">
-                                        <span class="fa fa-facebook"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="btn btn-lg btn-social-icon btn-telegram" title = "FoodCraft Telegram Page" href="https://t.me/Ygleplastic28">
-                                        <span class="fa fa-telegram"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div> -->
                     </div>
                 </div>
                 <div class="row rights">
