@@ -1,3 +1,4 @@
+<!-- <Ляна> -->
 <?php
 
     $ingredientName = $_POST["ingredientName"];
@@ -11,3 +12,4 @@
     fclose($chosenIngredientsFile);
  
 ?>
+<!-- <Ляна> -->

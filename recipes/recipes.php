@@ -55,48 +55,25 @@
                 </div>
                 <div class="ingredients-block">
                     <p class="ingredients-title">Інгредієнти</p>
+                    <!-- <Ляна>   -->
+                    <?php
+                        $ingredients = array("Чорний шоколад" => "50 г", "Перець чилі" => "½ дрібки", "Апельсинова цедра" => "¼ г", 
+                        "Вершки, 10 %" => "100 мл", "Какао-порошок" => "1 ст. л.", "Цукор" => "1 ч. л.", "Ром" => "1 ст. л.",
+                        "Морська сіль" => "½ дрібки.", "Маршмелоу / збиті вершки" => "за смаком");
+                        ksort($ingredients);
+                    ?>
                     <table class="table table-striped">
                         <tbody>
-                          <tr>
-                            <td>Чорний шоколад</td>
-                            <td>50 г</td>
-                          </tr>
-                          <tr>
-                            <td>Апельсинова цедра</td>
-                            <td>¼ г</td>
-                          </tr>
-                          <tr>
-                            <td>Вершки, 10 %</td>
-                            <td>100 мл</td>
-                          </tr>
-                          <tr>
-                            <td>Какао-порошок</td>
-                            <td>1 ст. л.</td>
-                          </tr>
-                          <tr>
-                            <td>Цукор</td>
-                            <td>1 ч. л.</td>
-                          </tr>
-                          <tr>
-                            <td>Ром</td>
-                            <td>1 ст. л.</td>
-                          </tr>
-
-                          <tr>
-                            <td>Перець чилі</td>
-                            <td>½ дрібки</td>
-                          </tr>
-                          <tr>
-                            <td>Морська сіль</td>
-                            <td>½ дрібки.</td>
-                          </tr>
-                          <tr>
-                            <td>Маршмелоу / збиті вершки</td>
-                            <td>за смаком</td>
-                          </tr>
+                        <?php 
+                            foreach($ingredients as $ingredient => $amount)
+                            { 
+                                echo ( "<tr> <td>" . $ingredient . "</td> <td>" . $amount . "</td> </tr> ");
+                            }
+                        ?>
                         </tbody>
-                      </table>
-                </div>
+                    </table>
+                    <!-- </Ляна>   -->
+                 </div>
             </div>
             <div class="right-container">
                 <div class="recipe-stage-container">
