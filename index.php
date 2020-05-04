@@ -150,8 +150,6 @@
                         <div class = "emails">
                             <h4>НАПИШІТЬ НАМ</h4>
                             <hr>
-                            <p>lana.gudyma15@gmail.com</p>
-                            <p>or4uk15@gmail.com</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -178,11 +176,12 @@
         <!-- </Ляна> -->
     </div>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="../themes/switcher.js"></script>
     <script type='text/javascript' src='https:/s/ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js'></script>    
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> 
     <script src="./index/print.js"></script>      
     <script src="./index/style.js"></script>
     <script src="./index/flickty.js"></script>
+    <script src="./emailsInfo/printEmails.js"></script>
+    <script src="./logging.js"></script>
 </body>
 </html>

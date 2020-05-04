@@ -50,37 +50,12 @@
            <div class="central-block">
                 <h2>Вхід</h2>
                 <!-- <Orest> -->
-                <?php 
-                    $hardCodeNickName = "Bruh";
-                    $hardCodeEmail = "or4uk15@gmail.com";
-                    $hardCodePdw = "password";
-                    $data = $_POST;
-
-                    if (isset($data['do_login'])) {
-                        $errors = array();
-                        if ($data['email'] != $hardCodeEmail) {
-                            $errors[] = 'Немає користувача з таким email' ;
-                        }
-
-                        if ($data['pwd'] != $hardCodePdw) {
-                            $errors[] = 'Введений неправильний пароль';
-                        }
-
-                        if (empty($errors)) {
-                            echo '<div style="color: RGB(153, 255, 153); font-size: 18px;">Дякую, '.$hardCodeNickName.'</div><hr>';
-                            $_SESSION["nickName"] = $hardCodeNickName;
-                        } else {
-                            echo '<div style="color: red;">'.array_shift($errors).'</div><hr>';
-                        }
-                    }
-                
-                
-                ?>
-                <form class="login-form" action="login.php" method="post">
+                <div class="test"></div>   
+                <form class="login-form" action="login.php" method="get">
                     <label for="uname"><b>Електронна пошта</b></label>
                     <input type="text" placeholder="Введіть електронну пошту" id = "uname" name="email">
                     <label for="psw"><b>Пароль</b></label>
-                    <input type="password" placeholder="Введіть пароль" id = "psw" name="pwd">
+                    <input type="password" placeholder="Введіть пароль" id="psw" name="psw">
                     <button name="do_login" class="login-button" type="submit">Увійти</button>
                 </form>
                 <!-- </Orest> -->
@@ -117,8 +92,6 @@
                         <div class = "emails">
                             <h4>НАПИШІТЬ НАМ</h4>
                             <hr>
-                            <p>lana.gudyma15@gmail.com</p>
-                            <p>or4uk15@gmail.com</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -157,8 +130,8 @@
         </footer>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js'></script>    
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> 
-    <script src="../themes/switcher.js"></script>
-    <script src="login.js"></script>  
+    <script src="login.js"></script> 
+    <script src="../emailsInfo/printEmails.js"></script> 
     </div>
 </body>
 </html>

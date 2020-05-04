@@ -48,68 +48,22 @@
     <div class="main-block">
        <div class="central-block">
             <h2>Реєстрація</h2>
-            
-            <?php 
-                $data = $_POST;
-                if (isset($data['do_signup'])) {
-                    
-                    $errors = array();
-                    if (trim($data['nickName']) == '')
-                    {
-                        $errors[] = 'Введіть логін!';
-                    } else if (mb_strlen(trim($data['nickName'])) < 3 || mb_strlen(trim($data['nickName'])) > 28) {
-                        $errors[] = 'Логін закороткий!';
-                    }
-
-                    if (trim($data['email']) == '')
-                    {
-                        $errors[] = 'Введіть email!';
-                    } else if (mb_strlen(trim($data['email'])) < 3 || mb_strlen(trim($data['email'])) > 28) {
-                        $errors[] = 'Email закороткий!';
-                    } else if (!preg_match("/^(?:[a-z0-9]+(?:[-_.]?[a-z0-9]+)?@[a-z0-9_.-]+(?:\.?[a-z0-9]+)?\.[a-z]{2,5})$/i", $data['email'])) {
-                        $errors[] = 'Email неправильний!';
-                    }   
-                    
-                    if ($data['psw'] == '')
-                    {
-                        $errors[] = 'Введіть пароль!';
-                    } else  if (mb_strlen(trim($data['psw'])) < 3 || mb_strlen(trim($data['psw'])) > 28) {
-                        $errors[] = 'Пароль закороткий!';
-                    }
-                    
-                    if ($data['pswRepeat'] != $data['psw'])
-                    {
-                        $errors[] = 'Паролі не співпадають';
-                    }
-
-                    if (empty($errors)) {
-                        echo '<div style="color: RGB(153, 255, 153); font-size: 18px;">Дякую, '.$data['nickName'].'</div><hr>';
-                    } else {
-                        echo '<div style="color: red;">'.array_shift($errors).'</div><hr>';
-                    }
-                }
-            ?>
-
-
-            <form class="registration-form" name="registration-form" action="registration.php" method="post">
+            <form class="registration-form" name="registration-form" action="../registered/registered.php" method="post">
                 <label for="nick-name"><b>Нік</b></label>
                 <div class = "nick-line">
-                    <input type="text" placeholder="Введіть нік" name="nickName" id="nick-name" value="<?php echo @$data['nickName']; ?>">
+                    <input type="text" placeholder="Введіть нік" name="nickName" class="nickName" id="nick-name" value="<?php echo @$data['nickName']; ?>">
                     <!-- <Ляна> -->
                     <button type="button" id="generate-button" class="btn btn-default generate-button">Згенерувати</button>
                     <!-- </Ляна> -->
                 </div>
                 <label for="email"><b>Електронна пошта</b></label>
-                <input type="text" placeholder="Введіть електронну пошту" name="email" id="email" value="<?php echo @$data['email']; ?>">
+                <input type="text" placeholder="Введіть електронну пошту" name="email" id="email" class="email" value="<?php echo @$data['email']; ?>">
                 <label for="psw"><b>Пароль</b></label>
-                <input type="password" placeholder="Введіть пароль" name="psw" id="psw" value="<?php echo @$data['psw']; ?>">
+                <input type="password" placeholder="Введіть пароль" name="psw" id="psw" class="psw" value="<?php echo @$data['psw']; ?>">
                 <label for="psw-repeat"><b>Підтвердження паролю</b></label>
                 <input type="password" placeholder="Введіть пароль ще раз" id = "pswRepeat" name="pswRepeat" value="<?php echo @$data['pswRepeat']; ?>">
-                <button class = "registration-button" type="submit" name="do_signup">Зарєєструватися</button>
+                <button class = "registration-button" type="button" name="do_signup" onclick="isValid()">Зарєєструватися</button>
             </form>
-
-
-
         </div>
     </div>  
     <footer>
@@ -143,8 +97,6 @@
                     <div class = "emails">
                         <h4>НАПИШІТЬ НАМ</h4>
                         <hr>
-                        <p>lana.gudyma15@gmail.com</p>
-                        <p>or4uk15@gmail.com</p>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -185,6 +137,6 @@
    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js'></script>    
    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> 
    <script src="registration.js"></script>
-   <script src="../themes/switcher.js"></script>
+   <script src="../emailsInfo/printEmails.js"></script>
 </body>
 </html>

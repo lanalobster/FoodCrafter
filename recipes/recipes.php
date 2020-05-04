@@ -152,8 +152,6 @@
                         <div class = "emails">
                             <h4>НАПИШІТЬ НАМ</h4>
                             <hr>
-                            <p>lana.gudyma15@gmail.com</p>
-                            <p>or4uk15@gmail.com</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -197,5 +195,6 @@
     <script src="../themes/switcher.js"></script>
     <script src = "recipes.js"></script>    
     <script src = "histogram.js"></script>
+    <script src="../emailsInfo/printEmails.js"></script>
 </body>
 </html>

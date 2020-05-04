@@ -39,6 +39,12 @@
     <div class = "main-block">
         <div class="central-block">
             <h2 class="header2">Дякуємо за реєстрацію!</h2>
+            <?php 
+                $data = $_POST;
+                if (isset($data)) {
+                    echo '<p style="color: RGB(153, 255, 153); font-size: 18px;">Дякую, '.$data['nickName'].'</p>';
+                }
+            ?>
             <p class="paragraph">Реєстрація пройшла успішно</p>
         </div>
     </div>  
