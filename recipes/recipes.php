@@ -46,33 +46,59 @@
             </div>
         </header>
         <div class="main-title-container">
-            <p class="main-title">КАКАО З ПЕРЦЕМ ЧИЛІ ТА РОМОМ</p>
+            <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "Kindzmarauli13";
+                $dbname = "RecipeBook";
+
+                $conn = new mysqli($servername, $username, $password);
+                $recipeId = 1;
+
+                $sql = "SELECT * FROM $dbname.recipe WHERE id='". $recipeId . "'";
+                $result = $conn->query($sql);
+                $recipe = $result->fetch_assoc();
+            ?>
+            <p class='main-title'><?php echo $recipe["name"] ?> </p><br>;
         </div>
         <div class="main-container">
             <div class="left-container">
                 <div class="image-block">
-                    <img id="cocoa-image" class="cocoa-image  img-responsive" src="../images/recipeCocoa.jpg" alt="Cocoa">
+                <!-- <img id='cocoa-image' class='cocoa-image  img-responsive' alt='Cocoa' src='..'> -->
+                <?php
+                    echo "<img id='cocoa-image' class='cocoa-image  img-responsive' alt='Cocoa' src='" . $recipe["image"] . "'><br>";
+                ?>
                 </div>
                 <div class="ingredients-block">
                     <p class="ingredients-title">Інгредієнти</p>
-                    <!-- <Ляна>   -->
-                    <?php
-                        $ingredients = array("Чорний шоколад" => "50 г", "Перець чилі" => "½ дрібки", "Апельсинова цедра" => "¼ г", 
-                        "Вершки, 10 %" => "100 мл", "Какао-порошок" => "1 ст. л.", "Цукор" => "1 ч. л.", "Ром" => "1 ст. л.",
-                        "Морська сіль" => "½ дрібки.", "Маршмелоу / збиті вершки" => "за смаком");
-                        ksort($ingredients);
+                      <?php
+                        // $ingredients = array("Чорний шоколад" => "50 г", "Перець чилі" => "½ дрібки", "Апельсинова цедра" => "¼ г", 
+                        // "Вершки, 10 %" => "100 мл", "Какао-порошок" => "1 ст. л.", "Цукор" => "1 ч. л.", "Ром" => "1 ст. л.",
+                        // "Морська сіль" => "½ дрібки.", "Маршмелоу / збиті вершки" => "за смаком");
+                        // ksort($ingredients);
                     ?>
                     <table class="table table-striped">
                         <tbody>
                         <?php 
-                            foreach($ingredients as $ingredient => $amount)
-                            { 
-                                echo ( "<tr> <td>" . $ingredient . "</td> <td>" . $amount . "</td> </tr> ");
+                            $sql = "SELECT * FROM $dbname.recipeIngredient WHERE recipe_id='". $recipeId . "'";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                $sql = "SELECT * FROM $dbname.ingredient WHERE id='". $row["ingredient_id"] . "'";
+                                $ingredients = $conn->query($sql);
+                                if ($ingredients->num_rows > 0) {
+                                    $ingredient = $ingredients->fetch_assoc();
+                                    echo "<tr> <td>" . $ingredient["name"] . "</td> <td>" . $row["amount"] . "</td> </tr>";
+                                } else {
+                                echo "0 results";
+                                }
+                            }
+                            } else {
+                            echo "0 results";
                             }
                         ?>
                         </tbody>
                     </table>
-                    <!-- </Ляна>   -->
                  </div>
             </div>
             <div class="right-container">
@@ -81,8 +107,9 @@
                     <div class="recipe-cooking">
                         <p class="stage-number">Етап 1</p>
                         <p class="stage-description">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                            Quas doloremqu, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas doloremqu 
+                            <?php 
+                                echo $recipe["instructions"]
+                            ?>
                         </p>
                         <p class="stage-number">Етап 2</p>
                         <p class="stage-description">
