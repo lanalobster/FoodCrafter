@@ -38,7 +38,7 @@
         <div class="block-top-auth">
                 <?php if (isset($_SESSION["nickName"])) :?>
                     <p class="nickname"><?php echo @$_SESSION["nickName"]; ?></p>
-                    <p> <a href="/logout.php">Вийти</p>
+                    <p> <a href="../logout.php">Вийти</p>
                 <?php else : ?>
                     <p><a href="../login/login.php">Вхід</a></p>
                     <p><a href="../registration/registration.php">Реєстрація</a></p>

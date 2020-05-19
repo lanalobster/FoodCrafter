@@ -5,25 +5,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>FoodCrafter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../index/header-footer.css">
-	<link rel="stylesheet" type="text/css" href="kitchen.css">
+    <link rel="stylesheet" type="text/css" href="userpage.css">
     <link href="https://fonts.googleapis.com/css?family=Headland+One&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
       <!--For the icons:-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script type='text/javascript' src='https:/s/ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js'></script>    
-	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> 
-		
-	<title>Kitchen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<div id="block-body">
+    <div id="block-body">
         <header>
             <div class="logo">
                 <a href="../index.php">
@@ -34,51 +31,35 @@
             </div>
             <div class="top-menu">
                 <ul>
-                    <li><a href="kitchen.php">Кухня</a></li>
+                    <li><a href="../kitchen/kitchen.php">Кухня</a></li>
                     <li><a href="../recipes/recipes.php">Рецепти</a></li>
                     <li><a href="">Замовити</a></li>
                 </ul>
             </div>
             <div class="block-top-auth">
                 <?php if (isset($_SESSION["nickName"])) :?>
-                    <p><?php echo @$_SESSION["nickName"]; ?></p>
-                    <p> <a href="../logout.php">Вийти</p>
+                    <p class="nickname"><?php echo @$_SESSION["nickName"]; ?></a></p>
+                    <p> <a href="../logout.php">Вийти</a></p>
                 <?php else : ?>
                     <p><a href="../login/login.php">Вхід</a></p>
                     <p><a href="../registration/registration.php">Реєстрація</a></p>
-                <?php endif;?> 
-            </div>
+                <?php endif;?>    
+            </div>  
         </header>
         <div class="main-block">
-	       <div class="input-block">
-	       		<div class="main-header">
-	       			<h1>Вибір інгредієнтів</h1>
-	       		</div>
-	       		<div class="input-body">
-	       			<img class="input-img" src="../images/foodlogo.png" alt="">
-                    <p id="hints"></p>
-	       			<div class="add-form">
-			       		<input autocomplete="off" id="input-ingredient" type="text"
-                            placeholder="Введіть назву інгредієнта" name="uname" onkeyup="showHints(this.value)" required>
-			       		<button class = "add-button" type="button" onclick="addIngredient()">Добавити</button>
-					</div>
-	       		</div>
-	       </div>
-	       <div class="output-block">
-	       		<div class="main-header">
-	       			<h1>Ваші інгредієнти</h1>
-	       		</div>
-				<ol id="list-ingredient">
-				  
-				</ol>
-	       </div>
-	       <div class="find-recipe-block">
-	       		<div class="main-header">
-	       			<h1>Пропоновані рецепти</h1>
-	       		</div>
-	       </div>			
-        </div>
-		<footer>
+           <div class="central-block">
+                <h2>Привіт, <?php echo @$_SESSION["nickName"]; ?>!</h2>
+                <label>Бажаєте змінити пароль?</label>
+                <div class="test"></div>   
+                <form class="change-form" action="../logined/logined.php" method="get">        
+                    <label for="psw"><b>Новий пароль</b></label>
+                    <input require type="password" placeholder="Введіть новий пароль" id="psw" name="psw">
+                    <button name="change" class="change-button" type="submit">Змінити пароль</button>
+                </form>
+                <p> <a href="deleteaccount.php">Видалити аккаунт</a></p>
+            </div>
+        </div>  
+        <footer>
             <div class="container-fluid footer-block">
                 <div class="row">
                     <div class="col-sm-3">
@@ -145,9 +126,10 @@
                 </div>
             </div>
         </footer>
-		<script src="kitchen.js"></script>
-		<script src="../themes/switcher.js"></script>
-        <script src="../emailsInfo/printEmails.js"></script>
-	</div>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js'></script>    
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> 
+    <script src="userpage.js"></script> 
+    <script src="../emailsInfo/printEmails.js"></script> 
+    </div>
 </body>
 </html>

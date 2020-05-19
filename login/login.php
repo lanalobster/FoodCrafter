@@ -39,7 +39,7 @@
             <div class="block-top-auth">
                 <?php if (isset($_SESSION["nickName"])) :?>
                     <p class="nickname"><?php echo @$_SESSION["nickName"]; ?></p>
-                    <p> <a href="/logout.php">Вийти</p>
+                    <p> <a href="../logout.php">Вийти</p>
                 <?php else : ?>
                     <p><a href="login.php">Вхід</a></p>
                     <p><a href="../registration/registration.php">Реєстрація</a></p>
@@ -51,7 +51,7 @@
                 <h2>Вхід</h2>
                 <!-- <Orest> -->
                 <div class="test"></div>   
-                <form class="login-form" action="login.php" method="get">
+                <form class="login-form" action="../logined/logined.php" method="get">
                     <label for="uname"><b>Електронна пошта</b></label>
                     <input type="text" placeholder="Введіть електронну пошту" id = "uname" name="email">
                     <label for="psw"><b>Пароль</b></label>

@@ -1,5 +1,6 @@
 <?php 
-    require "./sessionInfo.php";
+    require "sessionInfo.php";
     unset($_SESSION["nickName"]);
-    header('Location: /');
+    unset($_SESSION["email"]);
+    header('Location: /FoodCrafter/index.php');
 ?>

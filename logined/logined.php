@@ -1,3 +1,7 @@
+<?php 
+    require "../sessionInfo.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../index/header-footer.css">
-    <link rel="stylesheet" type="text/css" href="registered.css">
+    <link rel="stylesheet" type="text/css" href="logined.css">
     <link href="https://fonts.googleapis.com/css?family=Headland+One&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -32,19 +36,23 @@
             </ul>
         </div>
         <div class="block-top-auth">
-            <p><a href="../login/login.php">Вхід</a></p>
-            <p><a href="../registration/registration.php">Реєстрація</a></p>
+            <?php if (isset($_SESSION["nickName"])) :?>
+                    <p class="nickname"><a href="../userpage/userpage.php"><?php echo @$_SESSION["nickName"]; ?></a></p>
+                    <p> <a href="logout.php">Вийти</a></p>
+                <?php else : ?>
+                    <p><a href="./login/login.php">Вхід</a></p>
+                    <p><a href="./registration/registration.php">Реєстрація</a></p>
+            <?php endif;?> 
         </div>
     </header>
     <div class = "main-block">
         <div class="central-block">
             <?php 
-                $data = $_POST;
+                $data = $_SESSION;
                 if (isset($data)) {
-                    echo '<h2 class="header2">Дякуємо за реєстрацію, '. $data['nickName'].'!</h2>';
+                    echo '<h2 class="header2">Привіт, '. $data['nickName'].'!</h2>';
                 }
             ?>
-            <p class="paragraph">Реєстрація пройшла успішно</p>
         </div>
     </div>  
     <footer>

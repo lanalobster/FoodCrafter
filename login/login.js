@@ -12,11 +12,16 @@ $(document).ready(() => {
 	});
 });	
 // </Ляна>
+
 $(".login-form").submit(function(){
 	event.preventDefault(); 
 	var formData = $( this ).serialize();
 	console.log(formData);
-	$.get( "confirmLogin.php", formData, function( data ) {
-		$(".test" ).html( data ); 
-	})
+	$.get( "confirmLogin.php", formData, function(data) 
+	{
+		if(data)
+			$(".test").html(data);
+		else
+			$(".login-form").submit();		
+	});
 });

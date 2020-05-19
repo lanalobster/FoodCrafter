@@ -87,6 +87,9 @@ const isValid = () => {
 		nickName:$(".nickName").val(),
 		email:$(".email").val(),
 		psw:$(".psw").val()
+	},
+	function(data, status){
+	  alert("Data: " + data + "\nStatus: " + status);
 	});
 	document.forms["registration-form"].submit();
 };
