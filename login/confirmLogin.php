@@ -1,8 +1,8 @@
 <?php 
     require "../sessionInfo.php";
+    require "../config.php";
     $servername = "localhost";
     $username = "root";
-    $password = "Kindzmarauli13";
     $dbname = "FoodCraft";
 
     $email= $_GET["email"];

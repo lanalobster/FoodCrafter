@@ -23,30 +23,41 @@ const addIngredient = () => {
 	$.post("addIngredient.php",
 		{
 			ingredientName: input.value
-		}); //, (data) => {alert("Ingreds after adding:" + JSON.parse(data));});	
-	$.post("findRecipes.php", (data) => {
-			var recipeIds = JSON.parse(data);
-			//alert("Found recipe ids in recipe search:" + recipeIds);
-			const recipesDiv = document.getElementById("recipes");
-			recipesDiv.innerHTML = '';
-			for(var i = 0; i < recipeIds.length; ++i){
-				$.get("generateRecipeBlock.php", {id: recipeIds[i]}, (innerHTML) =>
-				{
+		}, (data) => {
+			if (data) {
+				$.post("findRecipes.php", (data) => {
+					var recipeIds = JSON.parse(data);
+					//alert("Found recipe ids in recipe search:" + recipeIds);
 					const recipesDiv = document.getElementById("recipes");
-					const recipeBlock = document.createElement('div');
-					recipeBlock.setAttribute('class', 'col-lg-3 col-md-4 col-xs-6 thumb');
-					recipeBlock.innerHTML = innerHTML;
-					recipesDiv.appendChild(recipeBlock);
+					recipesDiv.innerHTML = '';
+					for(var i = 0; i < recipeIds.length; ++i){
+						$.get("generateRecipeBlock.php", {id: recipeIds[i]}, (innerHTML) =>
+						{
+							const recipesDiv = document.getElementById("recipes");
+							const recipeBlock = document.createElement('div');
+							recipeBlock.setAttribute('class', 'col-lg-3 col-md-4 col-xs-6 thumb');
+							recipeBlock.innerHTML = innerHTML;
+							recipesDiv.appendChild(recipeBlock);
+						});
+					}
 				});
+				
+				if (list.childNodes.length <= 1) {
+					list.appendChild(item);
+				} else {
+					list.insertBefore(item, list.childNodes[0]);
+				}
+				input.value = "";
+			} else {
+				alert("Такого інгредієнта не існує!");
 			}
-		});
+			
+
+			
+		}); //, (data) => {alert("Ingreds after adding:" + JSON.parse(data));});	
+
 	// </Ляна> 
-	if (list.childNodes.length <= 1) {
-		list.appendChild(item);
-	} else {
-		list.insertBefore(item, list.childNodes[0]);
-	}
-	input.value = "";
+	
 	$("#hints").hide();
 }
 // </Ляна>

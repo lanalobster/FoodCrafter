@@ -127,3 +127,7 @@
 .img-responsive:hover {
     cursor: pointer;
 }
+
+.thumb {
+    margin-top: 25px;
+}

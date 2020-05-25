@@ -42,14 +42,17 @@
             </div>
             <div class="block-top-auth">
                 <?php if (isset($_SESSION["nickName"])) :?>
-                    <p><?php echo @$_SESSION["nickName"]; ?></p>
-                    <p> <a href="../logout.php">Вийти</p>
+                    <p class="nickname"><a href="../userpage/userpage.php"><?php echo @$_SESSION["nickName"]; ?></a></p>
+                    <p> <a href="../logout.php">Вийти</a></p>
                 <?php else : ?>
                     <p><a href="../login/login.php">Вхід</a></p>
                     <p><a href="../registration/registration.php">Реєстрація</a></p>
                 <?php endif;?> 
             </div>
         </header>
+
+        <?php if (isset($_SESSION["nickName"])) :?>
+
         <div class="main-block">
 	       <div class="input-block">
 	       		<div class="main-header">
@@ -83,6 +86,17 @@
                     </div>
             </div>
         </div>
+
+        <?php else : ?>
+
+            <div class="redirection-block">
+                <div class="central-block">
+                    <p class="paragraph">Спочатку <a href="../login/login.php">увійдіть</a> щоб користуватись кухнею</p>
+                </div>
+            </div> 
+
+        <?php endif ; ?>
+
 		<footer>
             <div class="container-fluid footer-block">
                 <div class="row">

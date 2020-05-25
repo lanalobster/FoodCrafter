@@ -1,7 +1,7 @@
 <?php 
+    require "../config.php";
     $servername = "localhost";
     $username = "root";
-    $password = "Kindzmarauli13";
     $dbname = "FoodCraft";
 
     $nickName = $_POST["nickName"];

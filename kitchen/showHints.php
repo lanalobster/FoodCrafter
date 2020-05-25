@@ -1,8 +1,7 @@
 <?php 
-
+    require "../config.php";
     $servername = "localhost";
     $username = "root";
-    $password = "Kindzmarauli13";
     $dbname = "RecipeBook";
     $input = $_GET["input"];
 

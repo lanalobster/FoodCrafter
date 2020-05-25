@@ -1,9 +1,9 @@
 <?php
     require "../sessionInfo.php";
+    require "../config.php";
     header('Content-Type: text/html; charset=utf-8');
     $servername = "localhost";
     $username = "root";
-    $password = "Kindzmarauli13";
     $dbname = "RecipeBook";
 
     $conn = new mysqli($servername, $username, $password);

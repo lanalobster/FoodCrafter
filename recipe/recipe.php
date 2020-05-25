@@ -1,5 +1,6 @@
 <?php 
     require "../sessionInfo.php";
+    require "../config.php";
 ?>
 
 <!DOCTYPE html>
@@ -37,8 +38,8 @@
             </div>
             <div class="block-top-auth">
                 <?php if (isset($_SESSION["nickName"])) :?>
-                    <p class="nickname"><?php echo @$_SESSION["nickName"]; ?></p>
-                    <p> <a href="../logout.php">Вийти</p>
+                    <p class="nickname"><a href="../userpage/userpage.php"><?php echo @$_SESSION["nickName"]; ?></a></p>
+                    <p> <a href="../logout.php">Вийти</a></p>
                 <?php else : ?>
                     <p><a href="../login/login.php">Вхід</a></p>
                     <p><a href="../registration/registration.php">Реєстрація</a></p>
@@ -49,7 +50,6 @@
             <?php
                 $servername = "localhost";
                 $username = "root";
-                $password = "Kindzmarauli13";
                 $dbname = "RecipeBook";
 
                 $conn = new mysqli($servername, $username, $password);
@@ -59,7 +59,7 @@
                 $result = $conn->query($sql);
                 $recipe = $result->fetch_assoc();
             ?>
-            <p class='main-title'><?php echo $recipe["name"] ?> </p><br>;
+            <p class='main-title'><?php echo $recipe["name"] ?> </p><br>
         </div>
         <div class="main-container">
             <div class="left-container">
@@ -105,15 +105,16 @@
                 <div class="recipe-stage-container">
                     <p class="recipe-title-block">Приготування</p>
                     <div class="recipe-cooking">
-                        <p class="stage-description">
                             <?php 
                                 $instructions = $recipe["instructions"];
-                                $startStage = "Етап№ ". 2;
-                                $endStagePos = strpos($instructions, $stage);
-                                //substr
-                                echo $instructions;
+
+                                $pieces = explode("Етап №", $instructions);
+
+                                for ($i = 0, $j = substr_count($instructions, 'Етап №'); $i < $j; $i++) {
+                                    echo "<p class=\"stage-number\">Етап №".($i + 1)."</p>";
+                                    echo "<p class=\"stage-description\" align=\"center\">".substr($pieces[$i+1], 3)."</p>";
+                                }
                             ?>
-                        </p>
                      </div>
                 </div>
             </div>

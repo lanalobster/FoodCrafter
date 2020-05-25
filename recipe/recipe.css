@@ -69,7 +69,7 @@
 .right-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
     padding: 0px;
     margin: 10px;
