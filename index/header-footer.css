@@ -129,7 +129,7 @@ footer h4{
     text-align: center;
     font-weight: normal;
 }
-.addresses, .emails, .social-profiles{
+.addresses, .emails, .profiles{
     margin: 2vh; 
  }
  
@@ -141,7 +141,7 @@ footer h4{
     float: left;
  }
 
- .social-profiles{
+ .profiles{
     float: right;
  }
 
@@ -157,28 +157,6 @@ footer h4{
 .emails p{
     margin-top: 1vh;
 }
-
-.social-profiles ul{
-    margin-top: 7px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; 
-    align-items: flex-start; 
-}
-
-.social-profiles li{
-    padding: 3px;
-    margin: 2px;
-    border-radius: 50%;
-    font-size: 20px;  
-    background-color: #dbd9d9;
-    color: #191919;
-}
-
- .fa:hover{
-    opacity: 0.7;
-} 
 
 .rights{
     height: 5vh;
@@ -278,9 +256,46 @@ text-align: center;
 color: white;
 }
 
-i.fa {
-font-size:50px;
+ .profiles ul{
+    margin-top: 7px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
 }
 
+.profiles li{
+    text-decoration: none;
+    text-align: center; 
+    margin: 2px 2px;
+    font-size: 30px;  
+} 
+
+.fa {
+    padding: 8px;
+    border-radius: 50%;
+    width: 50px;
+    margin: 5px 2px;
+    font-size: 30px;
+    background-color: #dbd9d9;
+    color: #191919;
+} 
+ 
+.fa:hover{
+    opacity: 0.7;
+}
+
+.card{
+    float: right;
+    padding: 16px;
+    text-align: center;
+    color: white;
+    }
+    
+i.fa {
+font-size:30px;
+}
+  
 .print-button:hover { background: rgba(255,255,255,.2); }
 .print-button:active { background: rgba(255,255,255,.2);; }

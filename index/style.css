@@ -172,21 +172,6 @@
     transform: scale(1.08);
 } */
 
-.recipe1 {
-    background-image: url("../images/recipe1.jpg");
-}
-
-.recipe2 {
-    background-image: url("../images/recipe2.jpg");
-}
-
-.recipe3 {
-    background-image: url("../images/recipe3.jpg");
-}
-
-.recipe4 {
-    background-image: url("../images/recipe4.jpg");
-}
 
 /*Ispiration*/
 .inspiration-block{
@@ -251,4 +236,12 @@
     font-family: 'Ubuntu', light italic;
     font-size: 20px;
     font-weight: bold;
+}
+
+.caption:hover {
+    cursor: pointer;
+}
+
+.img-responsive:hover {
+    cursor: pointer;
 }

@@ -120,10 +120,3 @@
     align-items: center;
 }
 
-.caption:hover {
-    cursor: pointer;
-}
-
-.img-responsive:hover {
-    cursor: pointer;
-}

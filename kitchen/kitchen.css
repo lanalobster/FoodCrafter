@@ -121,4 +121,22 @@ input[type=text] {
     flex-basis: 50%;
     flex-direction: column;
     align-items: center;
+    max-width: 50%;
 }
+
+.caption:hover {
+    cursor: pointer;
+}
+.img-responsive:hover {
+    cursor: pointer;
+}
+
+/* img {
+    width: 275px;
+    height: 275px;
+    margin: 20px;
+    transition: 1s;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    max-width: 100px;
+} */

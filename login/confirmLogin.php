@@ -20,6 +20,6 @@
     } else {
         $_SESSION["nickName"] = $row["nickname"];
         $_SESSION["email"] = $email;
-        $conn->close();
-    }         
+    }  
+    $conn->close();       
 ?>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../index/header-footer.css">
-    <link rel="stylesheet" type="text/css" href="recipes.css">
+    <link rel="stylesheet" type="text/css" href="recipe.css">
     <link href="https://fonts.googleapis.com/css?family=Headland+One&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -31,7 +31,7 @@
             <div class="top-menu">
                 <ul>
                     <li><a href="../kitchen/kitchen.php">Кухня</a></li>
-                    <li><a href="">Рецепти</a></li>
+                    <li><a href="../recipes/recipes.php">Рецепти</a></li>
                     
                 </ul>
             </div>
@@ -46,30 +46,77 @@
             </div>
         </header>
         <div class="main-title-container">
+            <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "Kindzmarauli13";
+                $dbname = "RecipeBook";
+
+                $conn = new mysqli($servername, $username, $password);
+                $recipeId = $_GET["recipeId"];
+                    
+                $sql = "SELECT * FROM $dbname.recipe WHERE id='". $recipeId . "'";
+                $result = $conn->query($sql);
+                $recipe = $result->fetch_assoc();
+            ?>
+            <p class='main-title'><?php echo $recipe["name"] ?> </p><br>;
         </div>
         <div class="main-container">
-            <div class="container-fluid">
-                <div class="row" id="recipes">
+            <div class="left-container">
+                <div class="image-block">
+                <!-- <img id='cocoa-image' class='cocoa-image  img-responsive' alt='Cocoa' src='..'> -->
                 <?php
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "Kindzmarauli13";
-                    $dbname = "RecipeBook";
-
-                    $conn = new mysqli($servername, $username, $password);
-
-                    $sql = "SELECT * FROM $dbname.recipe";
-                    $result = $conn->query($sql);
-                    while($recipe = $result->fetch_assoc()){
-                        $recipeBlock = "<div class = 'col-lg-3 col-md-4 col-xs-6 thumb'>";
-                        $recipeBlock .= "<a class='thumbnail' onclick='showRecipe(" . $recipe["id"] . ")'><img class='img-responsive' src='../images/" . $recipe["image"] . "'>";
-                        $recipeBlock .= " <div class='caption'><p>" . $recipe["name"] . "</p></div></a>";
-                        $recipeBlock .= "</div>";
-                        echo $recipeBlock;
-                    }
-                ?>  
+                    echo "<img id='cocoa-image' class='cocoa-image  img-responsive' alt='Cocoa' src='../images/" . $recipe["image"] . "'><br>";
+                ?>
                 </div>
-            </div>        
+                <div class="ingredients-block">
+                    <p class="ingredients-title">Інгредієнти</p>
+                      <?php
+                        // $ingredients = array("Чорний шоколад" => "50 г", "Перець чилі" => "½ дрібки", "Апельсинова цедра" => "¼ г", 
+                        // "Вершки, 10 %" => "100 мл", "Какао-порошок" => "1 ст. л.", "Цукор" => "1 ч. л.", "Ром" => "1 ст. л.",
+                        // "Морська сіль" => "½ дрібки.", "Маршмелоу / збиті вершки" => "за смаком");
+                        // ksort($ingredients);
+                    ?>
+                    <table class="table table-striped">
+                        <tbody>
+                        <?php 
+                            $sql = "SELECT * FROM $dbname.recipeIngredient WHERE recipe_id='". $recipeId . "'";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                $sql = "SELECT * FROM $dbname.ingredient WHERE id='". $row["ingredient_id"] . "'";
+                                $ingredients = $conn->query($sql);
+                                if ($ingredients->num_rows > 0) {
+                                    $ingredient = $ingredients->fetch_assoc();
+                                    echo "<tr> <td>" . $ingredient["name"] . "</td> <td>" . $row["amount"] . "</td> </tr>";
+                                } else {
+                                echo "0 results";
+                                }
+                            }
+                            } else {
+                            echo "0 results";
+                            }
+                        ?>
+                        </tbody>
+                    </table>
+                 </div>
+            </div>
+            <div class="right-container">
+                <div class="recipe-stage-container">
+                    <p class="recipe-title-block">Приготування</p>
+                    <div class="recipe-cooking">
+                        <p class="stage-description">
+                            <?php 
+                                $instructions = $recipe["instructions"];
+                                $startStage = "Етап№ ". 2;
+                                $endStagePos = strpos($instructions, $stage);
+                                //substr
+                                echo $instructions;
+                            ?>
+                        </p>
+                     </div>
+                </div>
+            </div>
         </div>
         <footer>
             <div class="container-fluid footer-block">
@@ -137,7 +184,7 @@
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="../themes/switcher.js"></script>
-    <script src = "recipes.js"></script>    
+    <script src = "recipe.js"></script>    
     <script src = "histogram.js"></script>
     <script src="../emailsInfo/printEmails.js"></script>
 </body>

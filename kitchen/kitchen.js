@@ -19,29 +19,60 @@ const addIngredient = () => {
 				    		<span class="ingredient-name">${input.value}</span>
 				    	</div>
 					</div>`;	
-	// <Ляна> 		
-	$.post("../kitchen/addIngredient.php",
+	// <Ляна> 
+	$.post("addIngredient.php",
 		{
 			ingredientName: input.value
+		});//, (data) => {alert("Ingreds after adding:" + JSON.parse(data));});	
+	$.post("findRecipes.php", (data) => {
+			var recipeIds = JSON.parse(data);
+			//alert("Found recipe ids in recipe search:" + recipeIds);
+			const recipesDiv = document.getElementById("recipes");
+			recipesDiv.innerHTML = '';
+			for(var i = 0; i < recipeIds.length; ++i){
+				$.get("generateRecipeBlock.php", {id: recipeIds[i]}, (innerHTML) =>
+				{
+					const recipesDiv = document.getElementById("recipes");
+					const recipeBlock = document.createElement('div');
+					recipeBlock.setAttribute('class', 'col-lg-3 col-md-4 col-xs-6 thumb');
+					recipeBlock.innerHTML = innerHTML;
+					recipesDiv.appendChild(recipeBlock);
+				});
+			}
 		});
 	// </Ляна> 
 	if (list.childNodes.length <= 1) {
 		list.appendChild(item);
-		console.log("option 1");
 	} else {
 		list.insertBefore(item, list.childNodes[0]);
-		console.log("option 2");
 	}
 	input.value = "";
+	$("#hints").hide();
 }
 // </Ляна>
 
 const removeIngredient = (ingredientID) => {
 	// <Ляна>
 	var ingredientName = $("#" + ingredientID.id).find("span.ingredient-name").text();
-	$.post("../kitchen/deleteIngredient.php",
+	$.post("removeIngredient.php",
 		{
 			ingredientName: ingredientName
+		}); //, (data) => {alert("Ingreds after removing:" + JSON.parse(data));});	
+	$.post("findRecipes.php", (data) => {
+			var recipeIds = JSON.parse(data);
+			//alert("Found recipe ids in recipe search:" + recipeIds);
+			const recipesDiv = document.getElementById("recipes");
+			recipesDiv.innerHTML = '';
+			for(var i = 0; i < recipeIds.length; ++i){
+				$.get("generateRecipeBlock.php", {id: recipeIds[i]}, (innerHTML) =>
+				{
+					const recipesDiv = document.getElementById("recipes");
+					const recipeBlock = document.createElement('div');
+					recipeBlock.setAttribute('class', 'col-lg-3 col-md-4 col-xs-6 thumb');
+					recipeBlock.innerHTML = innerHTML;
+					recipesDiv.appendChild(recipeBlock);
+				});
+			}
 		});
 	// </Ляна>
 	$("#" + ingredientID.id).fadeOut("fast", function() {
@@ -62,7 +93,7 @@ const showHints = (input) => {
 			var foundHints = data;
 			if(String(foundHints) == "null")
 			{
-				$("#hints").hide();
+				$("#hints").text("Інгредієнта з такою назвою у нас не існує! ");
 				return;
 			}
 			$("#hints").show();
@@ -81,3 +112,7 @@ $(document).ready(() => {
 	});
 	// </Орест>
 });
+
+const showRecipe = (recipeId) => {
+	window.location = "../recipe/recipe.php?recipeId=" + recipeId;
+}

@@ -33,7 +33,7 @@
                 <ul>
                     <li><a href="../kitchen/kitchen.php">Кухня</a></li>
                     <li><a href="../recipes/recipes.php">Рецепти</a></li>
-                    <li><a href="">Замовити</a></li>
+                    
                 </ul>
             </div>
             <div class="block-top-auth">
@@ -95,24 +95,18 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class = "social-profiles">
+                        <div class = "profiles">
                             <h4>МИ У СОЦІАЛЬНИХ МЕРЕЖАХ</h4>
                             <hr>
-                            <ul class="list-inline">
+                            <ul>
                                 <li>
-                                    <a class="btn btn-lg btn-floating btn-social-icon btn-instagram" title = "FoodCraft Instagram Page" href="https://www.instagram.com/lanahudyma?r=nametag">
-                                        <span class="fa fa-instagram"></span>
-                                    </a>
+                                    <a title = "FoodCraft Instagram Page" href="https://www.instagram.com/lanahudyma?r=nametag" class="fa fa-instagram"></a>
                                 </li>
                                 <li>
-                                    <a class="btn btn-lg btn-social-icon btn-facebook" title = "FoodCraft Facebook Page" href="https://www.facebook.com/ira.hudyma">
-                                        <span class="fa fa-facebook"></span>
-                                    </a>
+                                    <a title = "FoodCraft Facebook Page" href="https://www.facebook.com/ira.hudyma" class="fa fa-facebook"></a>
                                 </li>
                                 <li>
-                                    <a class="btn btn-lg btn-social-icon btn-telegram" title = "FoodCraft Telegram Page" href="https://t.me/Ygleplastic28">
-                                        <span class="fa fa-telegram"></span>
-                                    </a>
+                                    <a class="fa fa-telegram" title = "FoodCraft Telegram Page" href="https://t.me/Ygleplastic28"></a>
                                 </li>
                             </ul>
                         </div>

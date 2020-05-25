@@ -36,7 +36,6 @@
                 <ul>
                     <li><a href="./kitchen/kitchen.php">Кухня</a></li>
                     <li><a href="./recipes/recipes.php">Рецепти</a></li>
-                    <li><a href="">Замовити</a></li>
                 </ul>
             </div>
             <div class="block-top-auth">
@@ -55,8 +54,8 @@
                     <div class="block1">
                         <h2>Розумний холодильник!</h2>
                         <div class="sup-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur </p>
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <p>Ми допоможемо підібрати рецепти з будь-яких інгредієнтів!</p>
+                            <p>Ви готові почати творити?</p>
                         </div>   
                         <a href="./kitchen/kitchen.php" id="button-1" class="button1" 
                         style = "font-size: 16px; color: white;">
@@ -79,9 +78,9 @@
         <div class="desciption-block" id = "desciption-block">
             <h1 class="desciption-block-header">Що тут можна знайти?</h1>
             <div class="desciption-block-supporttext">
-                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                  <p>adipisicing elit. Itaque quae</p> 
-                <p>voluptas, maxime corporis repellendus</p>
+                <p>Цей сайт для кожного, хто любить порадувати себе і близьких смакотою.</p>
+                <p>Тут Ви зможете підібрати найкращий рецепт в залежності від інгредієнтів,</p>
+                <p>які є у Вашому холодильнику, чим збережете себе від зайвого походу в машазин!</p>
             </div>
             <div class="desciption-block-bottom">
                 <p>Всі вкусняхи для тебе!</p>
@@ -92,10 +91,25 @@
                 <p>Наші пропозиції</p>
             </div>
             <div class="popular-recipe-block-cells">
-                <div class="recipe1 recipe-block"></div>
-                <div class="recipe2 recipe-block"></div>
-                <div class="recipe3 recipe-block"></div>
-                <div class="recipe4 recipe-block"></div>
+                <?php 
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "Kindzmarauli13";
+                    $dbname = "RecipeBook";
+
+                    $conn = new mysqli($servername, $username, $password);
+
+                    $sql = "SELECT * FROM $dbname.recipe LIMIT 4";
+                    $result = $conn->query($sql);
+                    while($recipe = $result->fetch_assoc()){
+                        $recipeBlock = "<div class = 'col-lg-3 col-md-4 col-xs-6 thumb'>";
+                        $recipeBlock .= "<a class='thumbnail' onclick='showRecipe(" . $recipe["id"] . ")'><img class='img-responsive' src='images/" . $recipe["image"] . "'>";
+                        $recipeBlock .= " <div class='caption'><p>" . $recipe["name"] . "</p></div></a>";
+                        $recipeBlock .= "</div>";
+                        echo $recipeBlock; 
+                    }
+                    $conn->close();
+                ?>
             </div>
         </div>
         <div id="inspiration-block" class ="inspiration-block">
@@ -150,7 +164,9 @@
                         <div class = "emails">
                             <h4>НАПИШІТЬ НАМ</h4>
                             <hr>
-                        </div>
+                            <p>lana.gudyma15@gmail.com</p>
+                            <p>or4uk15@gmail.com</p>
+                            </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="card">
@@ -176,7 +192,7 @@
         <!-- </Ляна> -->
     </div>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script type='text/javascript' src='https:/s/ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js'></script>    
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js'></script>    
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> 
     <script src="./index/print.js"></script>      
     <script src="./index/style.js"></script>

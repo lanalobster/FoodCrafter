@@ -73,15 +73,6 @@ const isValid = () => {
 	} else if(isAnyFieldEmpty()) {
 		return false;
 	}
-	// $.ajax({
-    //     type: "post",
-	// 	url: "addUsers.php",
-	// 	data: `nickName=${$(".nickName").val()}`,
-    //     async: false,
-    //     success : function(data) {
-	// 		console.log(data);
-    //     }
-	// });
 	$.post("addUsers.php",
 	{	
 		nickName:$(".nickName").val(),

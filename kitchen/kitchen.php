@@ -1,5 +1,6 @@
 <?php 
     require "../sessionInfo.php";
+    require "unsetFoundIds.php";
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
       <!--For the icons:-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script type='text/javascript' src='https:/s/ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js'></script>    
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js'></script>    
 	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> 
 		
 	<title>Kitchen</title>
@@ -36,7 +37,7 @@
                 <ul>
                     <li><a href="kitchen.php">Кухня</a></li>
                     <li><a href="../recipes/recipes.php">Рецепти</a></li>
-                    <li><a href="">Замовити</a></li>
+                    
                 </ul>
             </div>
             <div class="block-top-auth">
@@ -75,8 +76,12 @@
 	       <div class="find-recipe-block">
 	       		<div class="main-header">
 	       			<h1>Пропоновані рецепти</h1>
-	       		</div>
-	       </div>			
+                </div>
+                    <div class="container-fluid">
+                        <div class="row" id="recipes">
+                        </div>
+                    </div>
+            </div>
         </div>
 		<footer>
             <div class="container-fluid footer-block">
@@ -112,24 +117,18 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class = "social-profiles">
+                        <div class = "profiles">
                             <h4>МИ У СОЦІАЛЬНИХ МЕРЕЖАХ</h4>
                             <hr>
-                            <ul class="list-inline">
+                            <ul>
                                 <li>
-                                    <a class="btn btn-lg btn-floating btn-social-icon btn-instagram" title = "FoodCraft Instagram Page" href="https://www.instagram.com/lanahudyma?r=nametag">
-                                        <span class="fa fa-instagram"></span>
-                                    </a>
+                                    <a title = "FoodCraft Instagram Page" href="https://www.instagram.com/lanahudyma?r=nametag" class="fa fa-instagram"></a>
                                 </li>
                                 <li>
-                                    <a class="btn btn-lg btn-social-icon btn-facebook" title = "FoodCraft Facebook Page" href="https://www.facebook.com/ira.hudyma">
-                                        <span class="fa fa-facebook"></span>
-                                    </a>
+                                    <a title = "FoodCraft Facebook Page" href="https://www.facebook.com/ira.hudyma" class="fa fa-facebook"></a>
                                 </li>
                                 <li>
-                                    <a class="btn btn-lg btn-social-icon btn-telegram" title = "FoodCraft Telegram Page" href="https://t.me/Ygleplastic28">
-                                        <span class="fa fa-telegram"></span>
-                                    </a>
+                                    <a class="fa fa-telegram" title = "FoodCraft Telegram Page" href="https://t.me/Ygleplastic28"></a>
                                 </li>
                             </ul>
                         </div>
@@ -146,7 +145,6 @@
             </div>
         </footer>
 		<script src="kitchen.js"></script>
-		<script src="../themes/switcher.js"></script>
         <script src="../emailsInfo/printEmails.js"></script>
 	</div>
 </body>
