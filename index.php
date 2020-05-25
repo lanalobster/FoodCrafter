@@ -91,25 +91,27 @@
                 <p>Наші пропозиції</p>
             </div>
             <div class="popular-recipe-block-cells">
-                <?php 
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "Kindzmarauli13";
-                    $dbname = "RecipeBook";
+                <div class="row display-flex">
+                    <?php 
+                        $servername = "localhost";
+                        $username = "root";
+                        $password = "Kindzmarauli13";
+                        $dbname = "RecipeBook";
 
-                    $conn = new mysqli($servername, $username, $password);
+                        $conn = new mysqli($servername, $username, $password);
 
-                    $sql = "SELECT * FROM $dbname.recipe LIMIT 4";
-                    $result = $conn->query($sql);
-                    while($recipe = $result->fetch_assoc()){
-                        $recipeBlock = "<div class = 'col-lg-3 col-md-4 col-xs-6 thumb'>";
-                        $recipeBlock .= "<a class='thumbnail' onclick='showRecipe(" . $recipe["id"] . ")'><img class='img-responsive' src='images/" . $recipe["image"] . "'>";
-                        $recipeBlock .= " <div class='caption'><p>" . $recipe["name"] . "</p></div></a>";
-                        $recipeBlock .= "</div>";
-                        echo $recipeBlock; 
-                    }
-                    $conn->close();
-                ?>
+                        $sql = "SELECT * FROM $dbname.recipe LIMIT 4";
+                        $result = $conn->query($sql);
+                        while($recipe = $result->fetch_assoc()){
+                            $recipeBlock = "<div class = 'col-lg-3 col-md-4 col-xs-6'>";
+                            $recipeBlock .= "<a class='thumbnail' onclick='showRecipe(" . $recipe["id"] . ")'><img class='img-responsive' src='images/" . $recipe["image"] . "'>";
+                            $recipeBlock .= " <div class='caption'><p>" . $recipe["name"] . "</p></div></a>";
+                            $recipeBlock .= "</div>";
+                            echo $recipeBlock; 
+                        }
+                        $conn->close();
+                    ?>
+                </div>
             </div>
         </div>
         <div id="inspiration-block" class ="inspiration-block">

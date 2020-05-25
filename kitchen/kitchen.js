@@ -23,7 +23,7 @@ const addIngredient = () => {
 	$.post("addIngredient.php",
 		{
 			ingredientName: input.value
-		});//, (data) => {alert("Ingreds after adding:" + JSON.parse(data));});	
+		}); //, (data) => {alert("Ingreds after adding:" + JSON.parse(data));});	
 	$.post("findRecipes.php", (data) => {
 			var recipeIds = JSON.parse(data);
 			//alert("Found recipe ids in recipe search:" + recipeIds);

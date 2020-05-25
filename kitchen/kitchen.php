@@ -78,7 +78,7 @@
 	       			<h1>Пропоновані рецепти</h1>
                 </div>
                     <div class="container-fluid">
-                        <div class="row" id="recipes">
+                        <div class="row display-flex" id="recipes">
                         </div>
                     </div>
             </div>

@@ -17,7 +17,7 @@
         $result = $conn->query($sql);
         if($result->num_rows == 0)  
         {
-            $foundRecipeIds[] = "No such ingredient!";
+            $foundRecipeIds[] = 404;
         }
         $ingredientRow = $result->fetch_assoc();
         $ingredientID = $ingredientRow["id"];
@@ -26,7 +26,7 @@
         $result = $conn->query($sql);
         if($result->num_rows == 0)  
         {
-            $foundRecipeIds[] = "No recipes with such ingredient!";
+            $foundRecipeIds[] = 403;
         }
         
         while($recipeRow = $result->fetch_assoc()) {
@@ -34,6 +34,7 @@
         }
     }
     $foundRecipeIds = array_unique($foundRecipeIds);
+    $foundRecipeIds = array_values($foundRecipeIds);
     echo json_encode($foundRecipeIds);
     $conn->close();
 ?>

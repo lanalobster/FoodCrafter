@@ -49,7 +49,7 @@
         </div>
         <div class="main-container">
             <div class="container-fluid">
-                <div class="row" id="recipes">
+                <div class="row display-flex" id="recipes">
                 <?php
                     $servername = "localhost";
                     $username = "root";
